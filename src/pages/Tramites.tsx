@@ -217,25 +217,60 @@ const Tramites = () => {
           {/* Oficinas útiles */}
           <Card className="mt-8">
             <CardHeader>
-              <CardTitle>Oficinas y contactos útiles en Elche</CardTitle>
+              <CardTitle>Oficinas y contactos útiles</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div>
-                <h4 className="font-semibold">Comisaría de Policía Nacional (NIE)</h4>
-                <p className="text-sm text-muted-foreground">Av. de la Libertad, s/n - Elche</p>
-                <p className="text-sm text-muted-foreground">Cita previa: www.citapreviadnie.es</p>
+              <div className="bg-destructive/10 p-4 rounded-lg border border-destructive/20 mb-4">
+                <div className="flex items-start gap-2">
+                  <AlertCircle className="h-5 w-5 text-destructive mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-destructive mb-1">⚠️ Advertencia Importante</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Si no tienes documentación en regla, <strong>NO vayas a la Comisaría de Policía Nacional</strong> sin 
+                      antes consultar con un abogado. Podrías ser detenido y enfrentar un proceso de expulsión. 
+                      Es fundamental que un profesional te asesore antes de cualquier gestión policial.
+                    </p>
+                  </div>
+                </div>
               </div>
               
               <div>
-                <h4 className="font-semibold">Oficina de Extranjería</h4>
-                <p className="text-sm text-muted-foreground">C/ Curtidores, 1 - Alicante</p>
+                <h4 className="font-semibold">Oficina de Extranjería de Alicante</h4>
+                <p className="text-sm text-muted-foreground">C. de la Ebanistería, 4, 03008 Alicante</p>
                 <p className="text-sm text-muted-foreground">Tel: 965 93 17 00</p>
+                <p className="text-sm text-accent mt-1">Para trámites de arraigo, reagrupación y autorizaciones</p>
               </div>
 
               <div>
-                <h4 className="font-semibold">Ayuntamiento de Elche (Empadronamiento)</h4>
-                <p className="text-sm text-muted-foreground">Plaza del Ayuntamiento, 1</p>
-                <p className="text-sm text-muted-foreground">Cita previa: sede.elche.es</p>
+                <h4 className="font-semibold">Empadronamiento - Oficinas OMAC</h4>
+                <p className="text-sm text-muted-foreground mb-2">
+                  Hay oficinas OMAC en casi todos los barrios de Elche donde puedes tramitar tu empadronamiento.
+                </p>
+                <a 
+                  href="https://elche.es" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary hover:underline font-medium"
+                >
+                  → Buscar oficina OMAC más cercana en elche.es
+                </a>
+              </div>
+
+              <div className="bg-primary/5 p-4 rounded-lg border border-primary/20 mt-4">
+                <p className="text-sm">
+                  <strong>💡 Recomendación:</strong> Para cualquier trámite de extranjería, te recomendamos 
+                  consultar primero con{" "}
+                  <a 
+                    href="https://masanet.es" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline font-semibold"
+                  >
+                    el Estudio Jurídico Masanet
+                  </a>
+                  . Ellos te orientarán sobre qué documentos necesitas y te acompañarán en todo el proceso 
+                  para evitar problemas o rechazos.
+                </p>
               </div>
             </CardContent>
           </Card>
