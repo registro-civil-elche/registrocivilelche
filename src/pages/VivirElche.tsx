@@ -28,6 +28,20 @@ const VivirElche = () => {
       recommended: true
     },
     {
+      name: "Toscar",
+      price: "500-700€",
+      description: "Zona residencial y tranquila cerca del centro",
+      pros: ["Bien comunicado", "Zona segura", "Servicios cercanos"],
+      recommended: true
+    },
+    {
+      name: "Sector V",
+      price: "550-750€",
+      description: "Barrio moderno y bien planificado con servicios completos",
+      pros: ["Moderno", "Parques infantiles", "Supermercados cercanos"],
+      recommended: true
+    },
+    {
       name: "El Pla",
       price: "450-650€",
       description: "Zona moderna en expansión",
