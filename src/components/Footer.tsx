@@ -67,6 +67,17 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
           <p>© {new Date().getFullYear()} Latinos en Elche. Toda la información es orientativa.</p>
+          <p className="mt-2">
+            Web diseñada por{" "}
+            <a
+              href="https://www.linkedin.com/in/backtester/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              Víctor Ramón Pardilla Fernández
+            </a>
+          </p>
         </div>
       </div>
     </footer>
