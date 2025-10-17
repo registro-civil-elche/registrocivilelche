@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Users } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -32,6 +32,16 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+              <a 
+                href="https://www.facebook.com/groups/167509320309197" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Users className="mr-2 h-4 w-4" />
+                Grupo Facebook
+              </a>
+            </Button>
           </div>
 
           <button
@@ -56,6 +66,17 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+              <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white w-full">
+                <a 
+                  href="https://www.facebook.com/groups/167509320309197" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Users className="mr-2 h-4 w-4" />
+                  Grupo Facebook Oficial
+                </a>
+              </Button>
             </div>
           </div>
         )}

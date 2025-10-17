@@ -44,27 +44,32 @@ const Comunidad = () => {
   const onlineGroups = [
     {
       platform: "Facebook",
-      name: "Latinos en Elche",
-      members: "5,000+",
-      description: "Grupo principal para conectar, compartir info y ayudarse"
+      name: "Latinos en Elche (Oficial)",
+      members: "2,308",
+      description: "Grupo oficial y principal para conectar, compartir información y ayudarse mutuamente",
+      url: "https://www.facebook.com/groups/167509320309197",
+      isOfficial: true
     },
     {
       platform: "WhatsApp",
       name: "Comunidad Latina Elche",
       members: "1,000+",
-      description: "Ofertas de trabajo, vivienda y avisos importantes"
+      description: "Ofertas de trabajo, vivienda y avisos importantes",
+      isOfficial: false
     },
     {
       platform: "Facebook",
       name: "Venezolanos en Elche",
       members: "2,000+",
-      description: "Comunidad específica venezolana"
+      description: "Comunidad específica venezolana",
+      isOfficial: false
     },
     {
       platform: "Facebook",
       name: "Colombianos en Alicante y Elche",
       members: "3,000+",
-      description: "Comunidad colombiana en la provincia"
+      description: "Comunidad colombiana en la provincia",
+      isOfficial: false
     }
   ];
 
@@ -173,19 +178,43 @@ const Comunidad = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-4">
               {onlineGroups.map((group, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card 
+                  key={index} 
+                  className={`hover:shadow-lg transition-shadow ${
+                    group.isOfficial ? 'border-blue-500 border-2 bg-blue-50/50 dark:bg-blue-950/20' : ''
+                  }`}
+                >
                   <CardHeader>
                     <div className="flex items-start justify-between">
-                      <div>
-                        <Badge variant="outline" className="mb-2">{group.platform}</Badge>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Badge variant="outline">{group.platform}</Badge>
+                          {group.isOfficial && (
+                            <Badge className="bg-blue-600 hover:bg-blue-700 text-white">
+                              ⭐ Oficial
+                            </Badge>
+                          )}
+                        </div>
                         <CardTitle className="text-lg">{group.name}</CardTitle>
                         <CardDescription className="mt-1">{group.description}</CardDescription>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-sm text-muted-foreground">
-                      👥 {group.members} miembros
+                    <div className="flex items-center justify-between">
+                      <div className="text-sm text-muted-foreground">
+                        👥 {group.members} miembros
+                      </div>
+                      {group.url && (
+                        <a
+                          href={group.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                        >
+                          Unirme →
+                        </a>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

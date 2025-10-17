@@ -107,7 +107,40 @@ const HomePage = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Facebook Group CTA */}
+        <section className="bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100 dark:from-blue-950/30 dark:via-blue-900/30 dark:to-indigo-900/30 py-16 border-y">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <div className="mb-6 inline-flex p-4 rounded-full bg-blue-500/10">
+                <Users className="h-12 w-12 text-blue-600 dark:text-blue-400" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Únete a nuestra comunidad oficial en Facebook
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Más de <strong>2,300 latinos</strong> compartiendo información, ofertas de trabajo, vivienda 
+                y ayudándose mutuamente. ¡No estás solo en esta aventura!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="text-lg bg-blue-600 hover:bg-blue-700 text-white">
+                  <a 
+                    href="https://www.facebook.com/groups/167509320309197" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <PartyPopper className="mr-2 h-5 w-5" />
+                    Unirme al grupo oficial
+                  </a>
+                </Button>
+              </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                👥 Comunidad activa • 📢 Avisos diarios • 🤝 Apoyo mutuo
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Legal CTA Section */}
         <section className="bg-muted/50 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
