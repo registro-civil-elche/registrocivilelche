@@ -58,7 +58,7 @@ const Footer = () => {
               href="https://masanet.es"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-primary hover:underline"
+              className="text-sm font-medium text-foreground hover:text-primary hover:underline"
             >
               Estudio Jurídico Masanet →
             </a>
@@ -73,7 +73,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/backtester/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline font-medium"
+              className="text-foreground hover:text-primary hover:underline font-medium"
             >
               Víctor Ramón Pardilla Fernández
             </a>
