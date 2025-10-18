@@ -180,10 +180,31 @@ const Empleo = () => {
               <div className="mt-6 p-4 bg-muted/50 rounded-lg">
                 <h4 className="font-semibold mb-2">💡 Otros recursos útiles:</h4>
                 <ul className="text-sm space-y-1 text-muted-foreground">
-                  <li>• Grupos de Facebook: "Latinos en Elche", "Empleos Elche"</li>
+                  <li>
+                    •{" "}
+                    <a 
+                      href="https://www.facebook.com/groups/167509320309197" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-primary hover:underline font-medium"
+                    >
+                      Nuestro grupo oficial de Facebook
+                    </a>
+                  </li>
                   <li>• Grupos de WhatsApp de la comunidad latina</li>
                   <li>• Oficina de Empleo del Ayuntamiento de Elche (PROP)</li>
                   <li>• ETTs (Empresas de Trabajo Temporal) locales</li>
+                  <li>
+                    •{" "}
+                    <a 
+                      href="https://masanet.es" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-primary hover:underline font-medium"
+                    >
+                      Abogado de extranjería
+                    </a>
+                  </li>
                 </ul>
               </div>
             </CardContent>
