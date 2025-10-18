@@ -53,7 +53,7 @@ const Empleo = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Trabajar en Elche siendo Extranjero
+              Trabajar en Elche siendo extranjero
             </h1>
             <p className="text-xl text-muted-foreground">
               Guía completa sobre empleo, sectores con demanda y cómo conseguir trabajo en Elche
