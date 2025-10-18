@@ -225,7 +225,16 @@ const VivirElche = () => {
                   <li>Idealista.com</li>
                   <li>Fotocasa.es</li>
                   <li>Milanuncios.com</li>
-                  <li>Grupos de Facebook de latinos en Elche</li>
+                  <li>
+                    <a 
+                      href="https://www.facebook.com/groups/167509320309197" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-primary hover:underline font-medium"
+                    >
+                      Nuestro grupo oficial de Facebook
+                    </a>
+                  </li>
                 </ul>
               </div>
 
