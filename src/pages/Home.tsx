@@ -4,8 +4,21 @@ import { Home, FileText, Briefcase, Users, GraduationCap, Heart, PartyPopper } f
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import elchePanorama from "@/assets/elche-panorama.webp";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const features = [
     {
       icon: Home,
@@ -50,23 +63,43 @@ const HomePage = () => {
       <Navbar />
       
       <main>
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 py-20 md:py-32">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                Bienvenido a tu nueva vida en Elche
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                La guía completa para latinos que quieren vivir, trabajar y prosperar en Elche, España
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="text-lg">
-                  <Link to="/tramites">Comenzar con trámites</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="text-lg">
-                  <Link to="/comunidad">Unirte a la comunidad</Link>
-                </Button>
+        {/* Hero Section with Parallax */}
+        <section className="relative h-[600px] md:h-[700px] overflow-hidden">
+          {/* Parallax Background */}
+          <div 
+            className="absolute inset-0 w-full h-full"
+            style={{
+              transform: `translateY(${scrollY * 0.5}px)`,
+              willChange: 'transform'
+            }}
+          >
+            <img 
+              src={elchePanorama} 
+              alt="Panorámica de Elche - Basílica de Santa María y palmeral"
+              className="w-full h-[calc(100%+200px)] object-cover"
+            />
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+          </div>
+
+          {/* Hero Content */}
+          <div className="relative h-full flex items-center justify-center">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto text-center">
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
+                  Bienvenido a tu nueva vida en Elche
+                </h1>
+                <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow-lg">
+                  La guía completa para latinos que quieren vivir, trabajar y prosperar en Elche, España
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button asChild size="lg" className="text-lg shadow-xl">
+                    <Link to="/tramites">Comenzar con trámites</Link>
+                  </Button>
+                  <Button asChild size="lg" variant="secondary" className="text-lg shadow-xl bg-white/90 hover:bg-white text-primary">
+                    <Link to="/comunidad">Unirte a la comunidad</Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
