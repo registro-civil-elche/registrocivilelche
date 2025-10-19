@@ -139,6 +139,44 @@ const CertificadoMatrimonio = () => {
                 </CardContent>
               </Card>
 
+              <Card className="border-primary/50">
+                <CardHeader>
+                  <CardTitle className="text-2xl">¿Cuánto tarda el certificado de matrimonio?</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p>
+                    El <strong>tiempo de expedición del certificado de matrimonio</strong> varía según el método utilizado:
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Presencialmente:</strong> Entre 24-48 horas hábiles si acudes directamente al Registro Civil de Elche
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Por correo postal:</strong> Hasta 15 días hábiles desde la recepción de la solicitud
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Vía telemática:</strong> Entre 5-10 días hábiles
+                      </div>
+                    </div>
+                  </div>
+                  <Alert className="border-primary/30 bg-primary/5 mt-4">
+                    <AlertCircle className="h-4 w-4 text-primary" />
+                    <AlertDescription>
+                      <strong>¿Necesitas tu certificado urgentemente?</strong> Masanet Estudio Jurídico puede 
+                      gestionar la obtención rápida de tu certificado de matrimonio con garantías.
+                    </AlertDescription>
+                  </Alert>
+                </CardContent>
+              </Card>
+
               <Alert className="border-primary/50 bg-primary/5">
                 <AlertCircle className="h-4 w-4 text-primary" />
                 <AlertDescription>

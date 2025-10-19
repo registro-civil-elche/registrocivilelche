@@ -116,6 +116,44 @@ const CertificadoNacimiento = () => {
                 </CardContent>
               </Card>
 
+              <Card className="border-primary/50">
+                <CardHeader>
+                  <CardTitle className="text-2xl">¿Cuánto tarda el certificado de nacimiento?</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p>
+                    El <strong>tiempo de entrega del certificado de nacimiento</strong> depende del método de solicitud:
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Presencialmente:</strong> Entre 24-48 horas hábiles si se solicita directamente en el Registro Civil de Elche
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Por correo postal:</strong> Hasta 15 días hábiles dependiendo del servicio de correos
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Online (Sede Electrónica):</strong> Entre 5-10 días hábiles
+                      </div>
+                    </div>
+                  </div>
+                  <Alert className="border-primary/30 bg-primary/5 mt-4">
+                    <AlertCircle className="h-4 w-4 text-primary" />
+                    <AlertDescription>
+                      <strong>¿Necesitas tu certificado con urgencia?</strong> El Estudio Jurídico Masanet puede 
+                      agilizar la gestión de tu certificado de nacimiento de forma profesional y eficaz.
+                    </AlertDescription>
+                  </Alert>
+                </CardContent>
+              </Card>
+
               <Alert className="border-primary/50 bg-primary/5">
                 <AlertCircle className="h-4 w-4 text-primary" />
                 <AlertDescription>

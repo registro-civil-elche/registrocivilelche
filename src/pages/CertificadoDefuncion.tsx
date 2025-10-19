@@ -179,6 +179,44 @@ const CertificadoDefuncion = () => {
                 </CardContent>
               </Card>
 
+              <Card className="border-primary/50">
+                <CardHeader>
+                  <CardTitle className="text-2xl">¿Cuánto tarda el certificado de defunción?</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p>
+                    El <strong>plazo de expedición del certificado de defunción</strong> es normalmente más rápido por su carácter urgente:
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Presencialmente:</strong> Normalmente 24-48 horas hábiles en el Registro Civil de Elche
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Por correo:</strong> Entre 7-15 días hábiles según el servicio postal
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong>Trámites urgentes:</strong> Para herencias o pensiones, es posible gestionar expedición prioritaria
+                      </div>
+                    </div>
+                  </div>
+                  <Alert className="border-primary/30 bg-primary/5 mt-4">
+                    <AlertCircle className="h-4 w-4 text-primary" />
+                    <AlertDescription>
+                      <strong>¿Necesitas tramitar herencias o sucesiones?</strong> El Estudio Jurídico Masanet te asiste 
+                      con la obtención del certificado de defunción y todos los trámites posteriores de forma profesional.
+                    </AlertDescription>
+                  </Alert>
+                </CardContent>
+              </Card>
+
               <Alert className="border-primary/50 bg-primary/5">
                 <AlertCircle className="h-4 w-4 text-primary" />
                 <AlertDescription>
