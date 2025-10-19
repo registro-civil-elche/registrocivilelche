@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import ParallaxSection from "@/components/ParallaxSection";
-import juzgadosElche from "@/assets/juzgados-elche.webp";
+import juzgadosElche from "@/assets/juzgados-elche-hq.webp";
 
 const HomePage = () => {
   const certificates = [
@@ -104,17 +104,13 @@ const HomePage = () => {
           speed={0.5}
         >
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-background/90 rounded-full backdrop-blur-sm border border-primary/20">
-              <Building2 className="h-5 w-5 text-primary" aria-hidden="true" />
-              <span className="text-sm font-medium text-primary">Información y Asesoramiento</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg">
               Registro Civil de Elche, Alicante
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto text-white drop-shadow-md">
               Ubicado en el edificio de los <strong>Juzgados de Elche</strong>, <strong>Calle Eucalipto 21</strong>
             </p>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-white drop-shadow-md">
               Información actualizada sobre cita previa, certificados de nacimiento, matrimonio y defunción
             </p>
           </div>
