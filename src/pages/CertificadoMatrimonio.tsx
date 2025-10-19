@@ -54,9 +54,17 @@ const CertificadoMatrimonio = () => {
           {JSON.stringify(faqSchema)}
         </script>
       </Helmet>
+      
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
+      >
+        Saltar al contenido principal
+      </a>
+      
       <Navbar />
       
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
           <div className="container mx-auto px-4">

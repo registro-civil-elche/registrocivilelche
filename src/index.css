@@ -17,14 +17,14 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 142 76% 36%;
+    --primary: 142 76% 28%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 142 70% 45%;
+    --secondary: 142 70% 35%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 14% 96%;
-    --muted-foreground: 210 9% 40%;
+    --muted-foreground: 210 9% 35%;
 
     --accent: 142 65% 30%;
     --accent-foreground: 0 0% 100%;
@@ -101,5 +101,29 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
 }

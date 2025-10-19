@@ -49,12 +49,13 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <button
-              onClick={handleHomeClick}
-              className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
-            >
-              Inicio
-            </button>
+              <button
+                onClick={handleHomeClick}
+                className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
+                aria-label="Ir a inicio"
+              >
+                Inicio
+              </button>
             
             <DropdownMenu>
               <DropdownMenuTrigger className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none">
@@ -80,6 +81,7 @@ const Navbar = () => {
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
                 className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
+                aria-label={`Ir a sección ${link.name}`}
               >
                 {link.name}
               </button>
@@ -89,6 +91,7 @@ const Navbar = () => {
                 href="https://masanet.es" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Contactar con asesoría legal Estudio Jurídico Masanet"
               >
                 Asesoría Legal
               </a>

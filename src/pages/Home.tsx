@@ -73,9 +73,18 @@ const HomePage = () => {
         <meta name="twitter:description" content="Información completa sobre trámites, certificados y cita previa del Registro Civil de Elche." />
         <meta name="twitter:image" content={elchePanorama} />
       </Helmet>
+      
+      {/* Skip to main content for keyboard navigation */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
+      >
+        Saltar al contenido principal
+      </a>
+      
       <Navbar />
       
-      <main>
+      <main id="main-content">
         {/* Disclaimer Banner */}
         <div className="bg-muted/50 border-b">
           <div className="container mx-auto px-4 py-3">
@@ -96,12 +105,14 @@ const HomePage = () => {
               src={elchePanorama} 
               alt="Vista panorámica de Elche, ciudad donde se encuentra el Registro Civil" 
               className="w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-primary/10 rounded-full backdrop-blur-sm">
-                <Building2 className="h-5 w-5 text-primary" />
+                <Building2 className="h-5 w-5 text-primary" aria-hidden="true" />
                 <span className="text-sm font-medium text-primary">Información y Asesoramiento</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -134,7 +145,7 @@ const HomePage = () => {
                     <Card className="hover:shadow-lg transition-all border-2 hover:border-primary/50 group cursor-pointer h-full">
                       <CardHeader className="text-center">
                         <div className="mb-4 inline-flex p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors mx-auto">
-                          <Icon className="h-8 w-8 text-primary" />
+                          <Icon className="h-8 w-8 text-primary" aria-hidden="true" />
                         </div>
                         <CardTitle className="text-xl mb-2">{cert.title}</CardTitle>
                         <CardDescription className="text-base">
@@ -142,7 +153,7 @@ const HomePage = () => {
                         </CardDescription>
                       </CardHeader>
                       <CardContent className="text-center">
-                        <Button className="w-full" variant="outline">
+                        <Button className="w-full" variant="outline" aria-label={`Ver información sobre ${cert.title}`}>
                           Más información
                         </Button>
                       </CardContent>
@@ -174,12 +185,12 @@ const HomePage = () => {
                     te recomendamos contactar con el <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Estudio Jurídico Masanet</a> que puede gestionar tus trámites de forma profesional.
                   </p>
 
-                  <div className="space-y-4">
+                    <div className="space-y-4">
                     {procedures.map((proc, index) => (
-                      <div key={index} className="flex items-start gap-3 p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors cursor-pointer">
-                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <div key={index} className="flex items-start gap-3 p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" aria-hidden="true" />
                         <div>
-                          <h3 className="font-semibold text-primary mb-1">{proc.title}</h3>
+                          <h3 className="font-semibold text-foreground mb-1">{proc.title}</h3>
                           <p className="text-sm text-muted-foreground">{proc.description}</p>
                         </div>
                       </div>
@@ -192,7 +203,7 @@ const HomePage = () => {
                   <Card className="border-2">
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
-                        <MapPin className="h-5 w-5 text-primary" />
+                        <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
                         Ubicación
                       </CardTitle>
                     </CardHeader>
@@ -216,7 +227,7 @@ const HomePage = () => {
                   <Card className="border-2">
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
-                        <Clock className="h-5 w-5 text-primary" />
+                        <Clock className="h-5 w-5 text-primary" aria-hidden="true" />
                         Horario de atención
                       </CardTitle>
                     </CardHeader>
@@ -257,7 +268,7 @@ const HomePage = () => {
                   <Card className="border-2 bg-primary/5">
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
-                        <Info className="h-5 w-5 text-primary" />
+                        <Info className="h-5 w-5 text-primary" aria-hidden="true" />
                         Documentación
                       </CardTitle>
                     </CardHeader>
@@ -286,7 +297,7 @@ const HomePage = () => {
                 <CardContent className="p-8 md:p-12">
                   <div className="text-center mb-8">
                     <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-full mb-6">
-                      <Scale className="h-12 w-12 text-primary" />
+                      <Scale className="h-12 w-12 text-primary" aria-hidden="true" />
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
                       ¿Necesitas ayuda profesional con tus trámites?
