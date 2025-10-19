@@ -50,8 +50,8 @@ const HomePage = () => {
       description: "Trámites para inscribir a un recién nacido en el Registro Civil"
     },
     {
-      title: "Juramentos y promesas",
-      description: "Información sobre juramentos y promesas en el Registro Civil"
+      title: "Juramento de nacionalidad española",
+      description: "Información sobre el juramento o promesa de nacionalidad española"
     },
     {
       title: "Matrimonio civil",
