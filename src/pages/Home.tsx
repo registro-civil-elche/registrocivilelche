@@ -106,7 +106,7 @@ const HomePage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-background/90 rounded-full backdrop-blur-sm border border-primary/20">
               <Building2 className="h-5 w-5 text-primary" aria-hidden="true" />
-              <span className="text-sm font-medium text-primary">Ciudad de la Justicia</span>
+              <span className="text-sm font-medium text-primary">Información y Asesoramiento</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Registro Civil de Elche, Alicante
