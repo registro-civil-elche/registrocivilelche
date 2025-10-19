@@ -84,6 +84,29 @@ const HomePage = () => {
       <Navbar />
       
       <main id="main-content">
+        {/* Parallax Hero - Juzgados de Elche */}
+        <ParallaxSection 
+          imageSrc={juzgadosElche}
+          imageAlt="Edificio de los Juzgados de Elche donde se encuentra el Registro Civil"
+          speed={0.5}
+        >
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-background/90 rounded-full backdrop-blur-sm border border-primary/20">
+              <Building2 className="h-5 w-5 text-primary" aria-hidden="true" />
+              <span className="text-sm font-medium text-primary">Ciudad de la Justicia</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Registro Civil de Elche, Alicante
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-3xl mx-auto">
+              Ubicado en el edificio de los <strong>Juzgados de Elche</strong>, <strong>Calle Eucalipto 21</strong>
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Información actualizada sobre cita previa, certificados de nacimiento, matrimonio y defunción
+            </p>
+          </div>
+        </ParallaxSection>
+
         {/* Disclaimer Banner */}
         <div className="bg-muted/50 border-b">
           <div className="container mx-auto px-4 py-3">
@@ -98,18 +121,18 @@ const HomePage = () => {
         </div>
 
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24 overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-primary/10 rounded-full backdrop-blur-sm">
                 <Building2 className="h-5 w-5 text-primary" aria-hidden="true" />
                 <span className="text-sm font-medium text-primary">Información y Asesoramiento</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Registro Civil de Elche, Alicante
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Información actualizada sobre cita previa, certificados de nacimiento, matrimonio y defunción, y trámites del Registro Civil de Elche
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Toda la información sobre el Registro Civil de Elche
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                Guía completa sobre trámites, certificados, cita previa y asesoramiento legal especializado
               </p>
             </div>
           </div>
@@ -154,29 +177,6 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-
-        {/* Parallax Section - Juzgados de Elche */}
-        <ParallaxSection 
-          imageSrc={juzgadosElche}
-          imageAlt="Edificio de los Juzgados de Elche donde se encuentra el Registro Civil"
-          speed={0.5}
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-full mb-6 backdrop-blur-sm">
-              <Building2 className="h-8 w-8 text-primary" aria-hidden="true" />
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ciudad de la Justicia de Elche
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground mb-4">
-              El <strong>Registro Civil de Elche</strong> se encuentra ubicado en el edificio de los <strong>Juzgados de Elche</strong>, 
-              también conocido como Ciudad de la Justicia, en la <strong>Calle Eucalipto 21</strong>.
-            </p>
-            <p className="text-base text-muted-foreground">
-              Un moderno complejo judicial que centraliza todos los servicios relacionados con la administración de justicia y el registro civil en Elche.
-            </p>
-          </div>
-        </ParallaxSection>
 
         {/* Registry Information */}
         <section id="informacion" className="py-16 bg-muted/30">
