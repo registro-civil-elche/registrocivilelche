@@ -295,53 +295,6 @@ const HomePage = () => {
           </div>
         </section>
 
-        {/* Additional Info */}
-        <section className="py-16 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                Información adicional sobre el Registro Civil
-              </h2>
-              <p className="text-muted-foreground mb-8">
-                El Registro Civil es la institución administrativa que tiene por objeto hacer constar oficialmente 
-                los hechos relativos al estado civil de las personas. En Elche, este servicio es fundamental para 
-                la gestión de documentación personal y legal de todos los ciudadanos.
-              </p>
-              <div className="grid md:grid-cols-3 gap-6">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">Certificados</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Expedición de certificados de nacimiento, matrimonio y defunción
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">Inscripciones</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Registro de nacimientos, matrimonios y otras circunstancias
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-lg">Rectificaciones</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      Corrección de errores en inscripciones registrales
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
