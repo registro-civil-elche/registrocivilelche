@@ -194,15 +194,40 @@ const HomePage = () => {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <Clock className="h-5 w-5 text-primary" />
-                        Horario de Atención
+                        Horario de atención
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        Para información sobre <strong>horarios de atención al público del Registro Civil de Elche</strong> 
-                        y gestión de cita previa, te recomendamos contactar con asesoría legal profesional que puede 
-                        ayudarte con todos los trámites de forma eficaz.
-                      </p>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Lunes:</span>
+                          <span className="font-medium">9:00 - 13:00</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Martes:</span>
+                          <span className="font-medium">9:00 - 13:00</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Miércoles:</span>
+                          <span className="font-medium">9:00 - 13:00</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Jueves:</span>
+                          <span className="font-medium">9:00 - 13:00</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Viernes:</span>
+                          <span className="font-medium">9:00 - 13:00</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Sábado:</span>
+                          <span className="font-medium">Cerrado</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-muted-foreground">Domingo:</span>
+                          <span className="font-medium">Cerrado</span>
+                        </div>
+                      </div>
                     </CardContent>
                   </Card>
 
