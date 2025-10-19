@@ -84,6 +84,19 @@ const HomePage = () => {
       <Navbar />
       
       <main id="main-content">
+        {/* Disclaimer Banner */}
+        <div className="bg-muted/50 border-b">
+          <div className="container mx-auto px-4 py-3">
+            <Alert className="border-primary/50 bg-primary/5">
+              <AlertCircle className="h-4 w-4 text-primary" />
+              <AlertDescription className="text-sm">
+                <strong>Portal informativo no oficial.</strong> Esta es una web independiente de información sobre el Registro Civil de Elche. 
+                Trabajamos con independencia del Ministerio de Justicia y cualquier otra administración pública.
+              </AlertDescription>
+            </Alert>
+          </div>
+        </div>
+
         {/* Parallax Hero - Juzgados de Elche */}
         <ParallaxSection 
           imageSrc={juzgadosElche}
@@ -106,19 +119,6 @@ const HomePage = () => {
             </p>
           </div>
         </ParallaxSection>
-
-        {/* Disclaimer Banner */}
-        <div className="bg-muted/50 border-b">
-          <div className="container mx-auto px-4 py-3">
-            <Alert className="border-primary/50 bg-primary/5">
-              <AlertCircle className="h-4 w-4 text-primary" />
-              <AlertDescription className="text-sm">
-                <strong>Portal informativo no oficial.</strong> Esta es una web independiente de información sobre el Registro Civil de Elche. 
-                Trabajamos con independencia del Ministerio de Justicia y cualquier otra administración pública.
-              </AlertDescription>
-            </Alert>
-          </div>
-        </div>
 
         {/* Hero Section */}
         <section className="py-16 md:py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">

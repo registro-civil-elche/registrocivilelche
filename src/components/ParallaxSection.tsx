@@ -59,12 +59,12 @@ const ParallaxSection = ({ imageSrc, imageAlt, children, speed = 0.5 }: Parallax
         <img
           src={imageSrc}
           alt={imageAlt}
-          className="w-full h-[120%] object-cover opacity-20"
+          className="w-full h-[120%] object-cover opacity-50"
           loading="lazy"
           decoding="async"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/50" />
       <div className="container mx-auto px-4 relative z-10">
         {children}
       </div>
