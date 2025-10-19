@@ -30,20 +30,40 @@ const HomePage = () => {
 
   const procedures = [
     {
-      title: "Pedir certificado de nacimiento en Elche",
+      title: "Certificado de nacimiento en Elche",
       description: "Información sobre cómo solicitar certificados de nacimiento"
     },
     {
-      title: "Pedir certificado de defunción en Elche",
+      title: "Certificado de defunción en Elche",
       description: "Guía para obtener certificados de defunción"
     },
     {
-      title: "Pedir certificado de matrimonio en Elche",
+      title: "Certificado de matrimonio en Elche",
       description: "Proceso para solicitar certificados de matrimonio"
     },
     {
-      title: "Cita previa en Registro Civil de Elche",
-      description: "Información sobre el sistema de citas previas"
+      title: "Inscripción de recién nacido",
+      description: "Trámites para inscribir a un recién nacido en el Registro Civil"
+    },
+    {
+      title: "Matrimonio civil en Elche",
+      description: "Información sobre celebración de matrimonios civiles"
+    },
+    {
+      title: "Consultas sobre matrimonio",
+      description: "Asesoramiento sobre trámites matrimoniales"
+    },
+    {
+      title: "Cambio de nombre y apellidos",
+      description: "Procedimiento para modificar nombre y apellidos"
+    },
+    {
+      title: "Trámites de nacionalidad",
+      description: "Gestión de expedientes de nacionalidad española"
+    },
+    {
+      title: "Juramentos y promesas",
+      description: "Información sobre juramentos en el Registro Civil"
     },
     {
       title: "Ley del Registro Civil",
@@ -63,7 +83,7 @@ const HomePage = () => {
               <AlertCircle className="h-4 w-4 text-primary" />
               <AlertDescription className="text-sm">
                 <strong>Portal informativo no oficial.</strong> Esta es una web independiente de información sobre el Registro Civil de Elche. 
-                Trabajamos con independencia del Ministerio de Justicia y otra administración pública para ayudar en lo que el propio registro civil no puede atender por falta de medios.
+                Trabajamos con independencia del Ministerio de Justicia y cualquier otra administración pública.
               </AlertDescription>
             </Alert>
           </div>
