@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X, Users } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -8,10 +8,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Inicio", href: "/" },
-    { name: "Vivir en Elche", href: "/vivir-elche" },
-    { name: "Trámites", href: "/tramites" },
-    { name: "Empleo", href: "/empleo" },
-    { name: "Comunidad", href: "/comunidad" },
+    { name: "Certificados", href: "#certificados" },
+    { name: "Información", href: "#informacion" },
+    { name: "Ubicación", href: "#ubicacion" },
   ];
 
   return (
@@ -19,7 +18,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-primary">Latinos en Elche</span>
+            <span className="text-xl md:text-2xl font-bold text-primary">Registro Civil de Elche</span>
           </Link>
 
           <div className="hidden md:flex md:items-center md:space-x-6">
@@ -32,14 +31,13 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button asChild size="sm">
               <a 
-                href="https://www.facebook.com/groups/167509320309197" 
+                href="https://masanet.es" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <Users className="mr-2 h-4 w-4" />
-                Grupo Facebook
+                Asesoría Legal
               </a>
             </Button>
           </div>
@@ -66,15 +64,14 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white w-full">
+              <Button asChild size="sm" className="w-full">
                 <a 
-                  href="https://www.facebook.com/groups/167509320309197" 
+                  href="https://masanet.es" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Users className="mr-2 h-4 w-4" />
-                  Grupo Facebook Oficial
+                  Asesoría Legal
                 </a>
               </Button>
             </div>

@@ -1,60 +1,53 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Home, FileText, Briefcase, Users, GraduationCap, Heart, PartyPopper } from "lucide-react";
+import { FileText, MapPin, Clock, Phone, Info, AlertCircle, Building2, CheckCircle, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import elchePanorama from "@/assets/elche-panorama.webp";
-import { useEffect, useState } from "react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const HomePage = () => {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const features = [
+  const certificates = [
     {
-      icon: Home,
-      title: "Vivir en Elche",
-      description: "Encuentra tu hogar perfecto y conoce los mejores barrios de la ciudad.",
-      href: "/vivir-elche"
+      icon: FileText,
+      title: "Certificado de Nacimiento",
+      description: "Solicita tu certificado de nacimiento literal o extracto",
+      href: "#certificados"
     },
     {
       icon: FileText,
-      title: "Trámites y Documentación",
-      description: "Guías paso a paso para NIE, arraigo social, reagrupación familiar y más.",
-      href: "/tramites"
+      title: "Certificado de Matrimonio",
+      description: "Obtén tu certificado de matrimonio actualizado",
+      href: "#certificados"
     },
     {
-      icon: Briefcase,
-      title: "Empleo",
-      description: "Oportunidades laborales y consejos para trabajar en España.",
-      href: "/empleo"
+      icon: FileText,
+      title: "Certificado de Defunción",
+      description: "Tramita certificados de defunción",
+      href: "#certificados"
+    }
+  ];
+
+  const procedures = [
+    {
+      title: "Pedir certificado de nacimiento en Elche",
+      description: "Información sobre cómo solicitar certificados de nacimiento"
     },
     {
-      icon: Users,
-      title: "Comunidad Latina",
-      description: "Conecta con otros latinos, asociaciones y eventos culturales.",
-      href: "/comunidad"
+      title: "Pedir certificado de defunción en Elche",
+      description: "Guía para obtener certificados de defunción"
     },
     {
-      icon: GraduationCap,
-      title: "Educación",
-      description: "Colegios, universidad y homologación de títulos.",
-      href: "/educacion"
+      title: "Pedir certificado de matrimonio en Elche",
+      description: "Proceso para solicitar certificados de matrimonio"
     },
     {
-      icon: Heart,
-      title: "Salud",
-      description: "Accede al sistema sanitario español y encuentra médicos.",
-      href: "/salud"
+      title: "Cita previa en Registro Civil de Elche",
+      description: "Información sobre el sistema de citas previas"
+    },
+    {
+      title: "Ley del Registro Civil",
+      description: "Marco legal y normativa aplicable"
     }
   ];
 
@@ -63,152 +56,272 @@ const HomePage = () => {
       <Navbar />
       
       <main>
-        {/* Hero Section with Parallax */}
-        <section className="relative h-[600px] md:h-[700px] overflow-hidden">
-          {/* Parallax Background */}
-          <div 
-            className="absolute inset-0 w-full h-full"
-            style={{
-              transform: `translateY(${scrollY * 0.5}px)`,
-              willChange: 'transform'
-            }}
-          >
-            <img 
-              src={elchePanorama} 
-              alt="Panorámica de Elche - Basílica de Santa María y palmeral"
-              className="w-full h-[calc(100%+200px)] object-cover"
-            />
-            {/* Overlay for better text readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        {/* Disclaimer Banner */}
+        <div className="bg-muted/50 border-b">
+          <div className="container mx-auto px-4 py-3">
+            <Alert className="border-primary/50 bg-primary/5">
+              <AlertCircle className="h-4 w-4 text-primary" />
+              <AlertDescription className="text-sm">
+                <strong>Portal informativo no oficial.</strong> Esta es una web independiente de información sobre el Registro Civil de Elche. 
+                Trabajamos con independencia del Ministerio de Justicia y otra administración pública para ayudar en lo que el propio registro civil no puede atender por falta de medios.
+              </AlertDescription>
+            </Alert>
           </div>
+        </div>
 
-          {/* Hero Content */}
-          <div className="relative h-full flex items-center justify-center">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
-                  Bienvenido a tu nueva vida en Elche
-                </h1>
-                <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow-lg">
-                  La guía completa para latinos que quieren vivir, trabajar y prosperar en Elche, España
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="text-lg shadow-xl">
-                    <Link to="/tramites">Comenzar con trámites</Link>
-                  </Button>
-                  <Button asChild size="lg" variant="secondary" className="text-lg shadow-xl bg-white/90 hover:bg-white text-primary">
-                    <Link to="/comunidad">Unirte a la comunidad</Link>
-                  </Button>
-                </div>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-primary/10 rounded-full">
+                <Building2 className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium text-primary">Información y Asesoramiento</span>
               </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                Registro Civil de Elche, Alicante
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+                Información actualizada sobre trámites, certificados y procedimientos del Registro Civil de Elche
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Features Grid */}
-        <section className="py-20">
+        {/* Certificates Section */}
+        <section id="certificados" className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Todo lo que necesitas saber
+                Solicitar certificado en el Registro Civil
               </h2>
-              <p className="text-lg text-muted-foreground">
-                Información práctica y actualizada para facilitar tu adaptación
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Información sobre cómo obtener los certificados más solicitados
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
+            <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto mb-12">
+              {certificates.map((cert, index) => {
+                const Icon = cert.icon;
                 return (
-                  <Link key={index} to={feature.href}>
-                    <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer group">
-                      <CardHeader>
-                        <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                          <Icon className="h-6 w-6 text-primary" />
-                        </div>
-                        <CardTitle className="text-xl">{feature.title}</CardTitle>
-                        <CardDescription className="text-base">
-                          {feature.description}
-                        </CardDescription>
-                      </CardHeader>
-                    </Card>
-                  </Link>
+                  <Card key={index} className="hover:shadow-lg transition-all border-2 hover:border-primary/50 group cursor-pointer">
+                    <CardHeader className="text-center">
+                      <div className="mb-4 inline-flex p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors mx-auto">
+                        <Icon className="h-8 w-8 text-primary" />
+                      </div>
+                      <CardTitle className="text-xl mb-2">{cert.title}</CardTitle>
+                      <CardDescription className="text-base">
+                        {cert.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="text-center">
+                      <Button className="w-full" variant="outline">
+                        Más información
+                      </Button>
+                    </CardContent>
+                  </Card>
                 );
               })}
             </div>
           </div>
         </section>
 
-        {/* Facebook Group CTA */}
-        <section className="bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-100 dark:from-blue-950/30 dark:via-blue-900/30 dark:to-indigo-900/30 py-16 border-y">
+        {/* Registry Information */}
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="mb-6 inline-flex p-4 rounded-full bg-blue-500/10">
-                <Users className="h-12 w-12 text-blue-600 dark:text-blue-400" />
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Únete a nuestra comunidad oficial en Facebook
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+                Registro en Elche
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Más de <strong>2,300 latinos</strong> compartiendo información, ofertas de trabajo, vivienda 
-                y ayudándose mutuamente. ¡No estás solo en esta aventura!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="text-lg bg-blue-600 hover:bg-blue-700 text-white">
-                  <a 
-                    href="https://www.facebook.com/groups/167509320309197" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <PartyPopper className="mr-2 h-5 w-5" />
-                    Unirme al grupo oficial
-                  </a>
-                </Button>
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                {/* Left Column - Info */}
+                <div className="space-y-6">
+                  <p className="text-lg text-muted-foreground">
+                    En la oficina del Registro Civil de Elche se puede solicitar certificaciones de nacimiento, defunción y matrimonio. 
+                    Asimismo realizar las tramitaciones de hechos acaecidos con el Registro de la Ciudad.
+                  </p>
+
+                  <div className="space-y-4">
+                    {procedures.map((proc, index) => (
+                      <div key={index} className="flex items-start gap-3 p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors cursor-pointer">
+                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold text-primary mb-1">{proc.title}</h3>
+                          <p className="text-sm text-muted-foreground">{proc.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right Column - Contact & Location */}
+                <div className="space-y-6">
+                  <Card className="border-2">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <MapPin className="h-5 w-5 text-primary" />
+                        Ubicación
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <p className="text-sm">
+                        El Registro Civil de Elche se encuentra en la <strong>calle Eucalipto 21</strong>, en la Ciudad de la Justicia, 
+                        próximo al Hospital General Universitario de Elche e ligeramente más lejos está la comisaría de policía. 
+                        Adjunto se encuentra el Juzgado de Instrucción número 1.
+                      </p>
+                      <div className="pt-2">
+                        <p className="font-semibold mb-1">Dirección:</p>
+                        <p className="text-sm text-muted-foreground">Calle Eucalipto, 21</p>
+                        <p className="text-sm text-muted-foreground">03203 Elche, Alicante</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-2">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Clock className="h-5 w-5 text-primary" />
+                        Horario de Atención
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Para información sobre horarios de atención al público, se recomienda contactar directamente con el registro.
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-2 bg-primary/5">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Info className="h-5 w-5 text-primary" />
+                        Documentación
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm">
+                        <strong>Cosas que debe saber sobre la expedición de documentos:</strong>
+                      </p>
+                      <ul className="text-sm text-muted-foreground mt-2 space-y-1 list-disc list-inside">
+                        <li>Es importante llevar documentación identificativa</li>
+                        <li>Algunos trámites pueden requerir cita previa</li>
+                        <li>Los certificados pueden solicitarse en persona o por correo</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
-                👥 Comunidad activa • 📢 Avisos diarios • 🤝 Apoyo mutuo
-              </p>
             </div>
           </div>
         </section>
 
-        {/* Legal CTA Section */}
-        <section className="bg-muted/50 py-16">
+        {/* Professional Legal Help CTA */}
+        <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-4">
-                ¿Necesitas asesoría legal profesional?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Si necesitas ayuda con tus trámites de extranjería, te recomendamos contactar con el{" "}
-                <strong>Estudio Jurídico Masanet</strong>. Con más de 20 años de experiencia ayudando a la 
-                comunidad latina en Elche, son expertos en NIE, arraigo social, reagrupación familiar y nacionalidad española.
-              </p>
-              <Button asChild size="lg" variant="default">
-                <a href="https://masanet.es" target="_blank" rel="noopener noreferrer">
-                  Contactar con Masanet →
-                </a>
-              </Button>
+            <div className="max-w-4xl mx-auto">
+              <Card className="border-2 border-primary/20 shadow-xl">
+                <CardContent className="p-8 md:p-12">
+                  <div className="text-center mb-8">
+                    <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-full mb-6">
+                      <Scale className="h-12 w-12 text-primary" />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                      ¿Necesitas ayuda profesional con tus trámites?
+                    </h2>
+                    <p className="text-lg text-muted-foreground mb-2">
+                      Los procedimientos del Registro Civil pueden ser complejos y requerir asesoramiento legal especializado.
+                    </p>
+                  </div>
+
+                  <div className="bg-muted/50 rounded-lg p-6 mb-8">
+                    <h3 className="font-bold text-xl mb-4 text-center">Estudio Jurídico Masanet</h3>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Más de 20 años de experiencia</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Especialistas en Registro Civil</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Gestión de certificados y documentación</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Asesoramiento legal personalizado</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Trámites de nacionalidad</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span>Procedimientos de rectificación</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="text-center">
+                    <Button asChild size="lg" className="text-lg px-8">
+                      <a href="https://masanet.es" target="_blank" rel="noopener noreferrer">
+                        Contactar con Masanet →
+                      </a>
+                    </Button>
+                    <p className="text-sm text-muted-foreground mt-4">
+                      Consulta profesional para resolver tus dudas legales
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-20">
+        {/* Additional Info */}
+        <section className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <div className="grid gap-8 md:grid-cols-3">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">232,000</div>
-                <div className="text-muted-foreground">Habitantes en Elche</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-secondary mb-2">15%</div>
-                <div className="text-muted-foreground">Población extranjera</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-accent mb-2">300+</div>
-                <div className="text-muted-foreground">Días de sol al año</div>
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">
+                Información adicional sobre el Registro Civil
+              </h2>
+              <p className="text-muted-foreground mb-8">
+                El Registro Civil es la institución administrativa que tiene por objeto hacer constar oficialmente 
+                los hechos relativos al estado civil de las personas. En Elche, este servicio es fundamental para 
+                la gestión de documentación personal y legal de todos los ciudadanos.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Certificados</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      Expedición de certificados de nacimiento, matrimonio y defunción
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Inscripciones</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      Registro de nacimientos, matrimonios y otras circunstancias
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="text-lg">Rectificaciones</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">
+                      Corrección de errores en inscripciones registrales
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
