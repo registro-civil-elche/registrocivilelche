@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    // Si no estamos en la home, primero navegamos allí
+    if (window.location.pathname !== '/') {
+      window.location.href = '/' + sectionId;
+    } else {
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
   return (
     <footer className="border-t bg-muted/30 mt-20">
       <div className="container mx-auto px-4 py-12">
@@ -13,22 +25,41 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Información</h4>
+            <h4 className="font-semibold mb-4">Certificados</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#certificados" className="text-muted-foreground hover:text-primary">
-                  Certificados
-                </a>
+                <Link to="/certificado-nacimiento" className="text-muted-foreground hover:text-primary">
+                  Certificado de Nacimiento
+                </Link>
               </li>
               <li>
-                <a href="#informacion" className="text-muted-foreground hover:text-primary">
+                <Link to="/certificado-matrimonio" className="text-muted-foreground hover:text-primary">
+                  Certificado de Matrimonio
+                </Link>
+              </li>
+              <li>
+                <Link to="/certificado-defuncion" className="text-muted-foreground hover:text-primary">
+                  Certificado de Defunción
+                </Link>
+              </li>
+            </ul>
+            <h4 className="font-semibold mb-4 mt-6">Información</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <button 
+                  onClick={() => scrollToSection('#informacion')}
+                  className="text-muted-foreground hover:text-primary bg-transparent border-0 p-0 cursor-pointer text-left"
+                >
                   Información del Registro
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#ubicacion" className="text-muted-foreground hover:text-primary">
+                <button 
+                  onClick={() => scrollToSection('#ubicacion')}
+                  className="text-muted-foreground hover:text-primary bg-transparent border-0 p-0 cursor-pointer text-left"
+                >
                   Ubicación y Contacto
-                </a>
+                </button>
               </li>
             </ul>
           </div>
