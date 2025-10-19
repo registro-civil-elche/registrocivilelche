@@ -59,7 +59,7 @@ const ParallaxSection = ({ imageSrc, imageAlt, children, speed = 0.5 }: Parallax
         <img
           src={imageSrc}
           alt={imageAlt}
-          className="w-full h-[120%] object-cover"
+          className="w-full h-[120%] object-cover object-top"
           loading="eager"
           fetchPriority="high"
           decoding="async"
