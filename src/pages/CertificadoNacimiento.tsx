@@ -147,7 +147,7 @@ const CertificadoNacimiento = () => {
                   <Alert className="border-primary/30 bg-primary/5 mt-4">
                     <AlertCircle className="h-4 w-4 text-primary" />
                     <AlertDescription>
-                      <strong>¿Necesitas tu certificado con urgencia?</strong> El Estudio Jurídico Masanet puede 
+                      <strong>¿Necesitas tu certificado con urgencia?</strong> El <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Estudio Jurídico Masanet</a> puede 
                       agilizar la gestión de tu certificado de nacimiento de forma profesional y eficaz.
                     </AlertDescription>
                   </Alert>
@@ -173,12 +173,12 @@ const CertificadoNacimiento = () => {
                       ¿Necesitas ayuda profesional?
                     </h2>
                     <p className="text-muted-foreground mb-6">
-                      El Estudio Jurídico Masanet cuenta con más de 20 años de experiencia en trámites 
+                      El <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Estudio Jurídico Masanet</a> cuenta con más de 20 años de experiencia en trámites 
                       del Registro Civil y puede gestionar tu certificado de forma rápida y eficaz.
                     </p>
                     <Button asChild size="lg">
                       <a href="https://masanet.es" target="_blank" rel="noopener noreferrer">
-                        Contactar con Masanet →
+                        Contactar con Estudio Jurídico Masanet →
                       </a>
                     </Button>
                   </div>

@@ -148,7 +148,7 @@ const HomePage = () => {
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Para <strong>cita previa en el Registro Civil de Elche</strong> o información sobre disponibilidad, 
-                    te recomendamos contactar con el estudio jurídico Masanet que puede gestionar tus trámites de forma profesional.
+                    te recomendamos contactar con el <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Estudio Jurídico Masanet</a> que puede gestionar tus trámites de forma profesional.
                   </p>
 
                   <div className="space-y-4">
@@ -275,7 +275,11 @@ const HomePage = () => {
                   </div>
 
                   <div className="bg-muted/50 rounded-lg p-6 mb-8">
-                    <h3 className="font-bold text-xl mb-4 text-center">Estudio Jurídico Masanet</h3>
+                    <h3 className="font-bold text-xl mb-4 text-center">
+                      <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                        Estudio Jurídico Masanet
+                      </a>
+                    </h3>
                     <div className="grid md:grid-cols-2 gap-4 text-sm">
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -307,7 +311,7 @@ const HomePage = () => {
                   <div className="text-center">
                     <Button asChild size="lg" className="text-lg px-8">
                       <a href="https://masanet.es" target="_blank" rel="noopener noreferrer">
-                        Contactar con Masanet →
+                        Contactar con Estudio Jurídico Masanet →
                       </a>
                     </Button>
                     <p className="text-sm text-muted-foreground mt-4">

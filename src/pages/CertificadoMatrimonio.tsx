@@ -170,7 +170,7 @@ const CertificadoMatrimonio = () => {
                   <Alert className="border-primary/30 bg-primary/5 mt-4">
                     <AlertCircle className="h-4 w-4 text-primary" />
                     <AlertDescription>
-                      <strong>¿Necesitas tu certificado urgentemente?</strong> Masanet Estudio Jurídico puede 
+                      <strong>¿Necesitas tu certificado urgentemente?</strong> <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Masanet Estudio Jurídico</a> puede 
                       gestionar la obtención rápida de tu certificado de matrimonio con garantías.
                     </AlertDescription>
                   </Alert>
@@ -196,12 +196,12 @@ const CertificadoMatrimonio = () => {
                       ¿Necesitas asesoramiento legal?
                     </h2>
                     <p className="text-muted-foreground mb-6">
-                      Masanet Estudio Jurídico te ayuda con todos los trámites relacionados con el matrimonio, 
+                      <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Masanet Estudio Jurídico</a> te ayuda con todos los trámites relacionados con el matrimonio, 
                       separación, divorcio y modificación de régimen económico.
                     </p>
                     <Button asChild size="lg">
                       <a href="https://masanet.es" target="_blank" rel="noopener noreferrer">
-                        Contactar con Masanet →
+                        Contactar con Estudio Jurídico Masanet →
                       </a>
                     </Button>
                   </div>

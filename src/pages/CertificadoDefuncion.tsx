@@ -210,7 +210,7 @@ const CertificadoDefuncion = () => {
                   <Alert className="border-primary/30 bg-primary/5 mt-4">
                     <AlertCircle className="h-4 w-4 text-primary" />
                     <AlertDescription>
-                      <strong>¿Necesitas tramitar herencias o sucesiones?</strong> El Estudio Jurídico Masanet te asiste 
+                      <strong>¿Necesitas tramitar herencias o sucesiones?</strong> El <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Estudio Jurídico Masanet</a> te asiste 
                       con la obtención del certificado de defunción y todos los trámites posteriores de forma profesional.
                     </AlertDescription>
                   </Alert>
@@ -236,12 +236,12 @@ const CertificadoDefuncion = () => {
                       Asesoramiento legal especializado
                     </h2>
                     <p className="text-muted-foreground mb-6">
-                      El Estudio Jurídico Masanet te asiste en todos los trámites relacionados con herencias, 
+                      El <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Estudio Jurídico Masanet</a> te asiste en todos los trámites relacionados con herencias, 
                       sucesiones y gestión de documentación tras un fallecimiento.
                     </p>
                     <Button asChild size="lg">
                       <a href="https://masanet.es" target="_blank" rel="noopener noreferrer">
-                        Contactar con Masanet →
+                        Contactar con Estudio Jurídico Masanet →
                       </a>
                     </Button>
                   </div>
