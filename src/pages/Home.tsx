@@ -30,32 +30,32 @@ const HomePage = () => {
 
   const procedures = [
     {
-      title: "Certificado de nacimiento en Elche",
-      description: "Información sobre cómo solicitar certificados de nacimiento literal o extracto"
+      title: "Certificado literal de nacimiento en Elche",
+      description: "Solicitar certificado de nacimiento literal o extracto en el Registro Civil"
     },
     {
-      title: "Certificado de matrimonio en Elche",
-      description: "Proceso para solicitar certificados de matrimonio actualizado"
+      title: "Partida de matrimonio en Elche",
+      description: "Cómo pedir certificado de matrimonio actualizado"
     },
     {
       title: "Certificado de defunción en Elche",
       description: "Guía para obtener y tramitar certificados de defunción"
     },
     {
-      title: "Consultas sobre matrimonio",
-      description: "Asesoramiento y resolución de consultas sobre trámites matrimoniales"
+      title: "Consultas sobre matrimonio civil",
+      description: "Asesoramiento sobre matrimonio civil en Elche y trámites matrimoniales"
     },
     {
       title: "Inscripción de recién nacido",
-      description: "Trámites para inscribir a un recién nacido en el Registro Civil"
+      description: "Trámites para inscribir a un recién nacido en el Registro Civil de Elche"
     },
     {
       title: "Juramento de nacionalidad española",
-      description: "Información sobre el juramento o promesa de nacionalidad española"
+      description: "Información sobre el juramento o promesa de nacionalidad española en Elche"
     },
     {
-      title: "Matrimonio civil",
-      description: "Información sobre celebración de matrimonios civiles en Elche"
+      title: "Matrimonio civil en Elche",
+      description: "Información sobre celebración de matrimonios civiles en el Registro Civil"
     },
     {
       title: "Nacionalidades",
@@ -97,7 +97,7 @@ const HomePage = () => {
                 Registro Civil de Elche, Alicante
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Información actualizada sobre trámites, certificados y procedimientos del Registro Civil de Elche
+                Información actualizada sobre cita previa, certificados de nacimiento, matrimonio y defunción, y trámites del Registro Civil de Elche
               </p>
             </div>
           </div>
@@ -108,10 +108,10 @@ const HomePage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Solicitar certificado en el Registro Civil
+                Solicitar Certificados en el Registro Civil de Elche
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Información sobre cómo obtener los certificados más solicitados
+                Cómo pedir certificado literal de nacimiento, partida de matrimonio y defunción en Elche
               </p>
             </div>
 
@@ -148,15 +148,20 @@ const HomePage = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                Registro en Elche
+                Información del Registro Civil de Elche
               </h2>
               
               <div className="space-y-8">
                 {/* Info Section */}
                 <div className="space-y-6">
                   <p className="text-lg text-muted-foreground">
-                    En la oficina del Registro Civil de Elche se puede solicitar certificaciones de nacimiento, defunción y matrimonio. 
-                    Asimismo realizar las tramitaciones de hechos acaecidos con el Registro de la Ciudad.
+                    En la oficina del <strong>Registro Civil de Elche</strong> se puede solicitar certificaciones de nacimiento, defunción y matrimonio. 
+                    También se realizan inscripciones de recién nacidos, matrimonios civiles, consultas matrimoniales, trámites de nacionalidad, 
+                    juramentos de nacionalidad española y cambios de nombre y apellidos.
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Para <strong>cita previa en el Registro Civil de Elche</strong> o información sobre disponibilidad, 
+                    te recomendamos contactar con el estudio jurídico Masanet que puede gestionar tus trámites de forma profesional.
                   </p>
 
                   <div className="space-y-4">
@@ -183,14 +188,18 @@ const HomePage = () => {
                     </CardHeader>
                     <CardContent className="space-y-3">
                       <p className="text-sm">
-                        El Registro Civil de Elche se encuentra en la <strong>calle Eucalipto 21</strong>, en la Ciudad de la Justicia, 
+                        El <strong>Registro Civil de Elche</strong> se encuentra en la <strong>calle Eucalipto 21, 03203 Elche</strong>, en la Ciudad de la Justicia, 
                         próximo al Hospital General Universitario de Elche e ligeramente más lejos está la comisaría de policía. 
                         Adjunto se encuentra el Juzgado de Instrucción número 1.
                       </p>
                       <div className="pt-2">
-                        <p className="font-semibold mb-1">Dirección:</p>
+                        <p className="font-semibold mb-1">Dirección completa:</p>
                         <p className="text-sm text-muted-foreground">Calle Eucalipto, 21</p>
                         <p className="text-sm text-muted-foreground">03203 Elche, Alicante</p>
+                        <p className="text-sm text-muted-foreground mt-2">
+                          <strong>Nota:</strong> Para cita previa en el Registro Civil de Elche o consultar teléfono de contacto, 
+                          recomendamos contactar con asesoría legal especializada.
+                        </p>
                       </div>
                     </CardContent>
                   </Card>
@@ -204,7 +213,9 @@ const HomePage = () => {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Para información sobre horarios de atención al público, se recomienda contactar directamente con el registro.
+                        Para información sobre <strong>horarios de atención al público del Registro Civil de Elche</strong> 
+                        y gestión de cita previa, te recomendamos contactar con asesoría legal profesional que puede 
+                        ayudarte con todos los trámites de forma eficaz.
                       </p>
                     </CardContent>
                   </Card>
