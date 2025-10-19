@@ -6,8 +6,14 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.querySelector(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const navLinks = [
-    { name: "Inicio", href: "/" },
     { name: "Certificados", href: "#certificados" },
     { name: "Información", href: "#informacion" },
     { name: "Ubicación", href: "#ubicacion" },
@@ -22,14 +28,20 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex md:items-center md:space-x-6">
+            <Link
+              to="/"
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
+              Inicio
+            </Link>
             {navLinks.map((link) => (
-              <Link
+              <button
                 key={link.href}
-                to={link.href}
-                className="text-sm font-medium transition-colors hover:text-primary"
+                onClick={() => scrollToSection(link.href)}
+                className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
               >
                 {link.name}
-              </Link>
+              </button>
             ))}
             <Button asChild size="sm">
               <a 
@@ -54,15 +66,24 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-3">
+              <Link
+                to="/"
+                className="text-sm font-medium transition-colors hover:text-primary"
+                onClick={() => setIsOpen(false)}
+              >
+                Inicio
+              </Link>
               {navLinks.map((link) => (
-                <Link
+                <button
                   key={link.href}
-                  to={link.href}
-                  className="text-sm font-medium transition-colors hover:text-primary"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    scrollToSection(link.href);
+                    setIsOpen(false);
+                  }}
+                  className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0 text-left"
                 >
                   {link.name}
-                </Link>
+                </button>
               ))}
               <Button asChild size="sm" className="w-full">
                 <a 
