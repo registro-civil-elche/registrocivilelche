@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,6 +11,16 @@ import {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
+  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.querySelector(sectionId);
@@ -39,12 +49,12 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <Link
-              to="/"
-              className="text-sm font-medium transition-colors hover:text-primary"
+            <button
+              onClick={handleHomeClick}
+              className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
             >
               Inicio
-            </Link>
+            </button>
             
             <DropdownMenu>
               <DropdownMenuTrigger className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none">
@@ -97,13 +107,15 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-3">
-              <Link
-                to="/"
-                className="text-sm font-medium transition-colors hover:text-primary"
-                onClick={() => setIsOpen(false)}
+              <button
+                onClick={() => {
+                  handleHomeClick();
+                  setIsOpen(false);
+                }}
+                className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0 text-left"
               >
                 Inicio
-              </Link>
+              </button>
               
               <div className="space-y-2">
                 <p className="text-sm font-medium text-muted-foreground px-2">Certificados</p>
