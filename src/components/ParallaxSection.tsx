@@ -65,7 +65,7 @@ const ParallaxSection = ({ imageSrc, imageAlt, children, speed = 0.5 }: Parallax
           decoding="async"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/50" />
       <div className="container mx-auto px-4 relative z-10">
         {children}
       </div>
