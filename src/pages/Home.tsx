@@ -31,43 +31,39 @@ const HomePage = () => {
   const procedures = [
     {
       title: "Certificado de nacimiento en Elche",
-      description: "Información sobre cómo solicitar certificados de nacimiento"
-    },
-    {
-      title: "Certificado de defunción en Elche",
-      description: "Guía para obtener certificados de defunción"
+      description: "Información sobre cómo solicitar certificados de nacimiento literal o extracto"
     },
     {
       title: "Certificado de matrimonio en Elche",
-      description: "Proceso para solicitar certificados de matrimonio"
+      description: "Proceso para solicitar certificados de matrimonio actualizado"
+    },
+    {
+      title: "Certificado de defunción en Elche",
+      description: "Guía para obtener y tramitar certificados de defunción"
+    },
+    {
+      title: "Consultas sobre matrimonio",
+      description: "Asesoramiento y resolución de consultas sobre trámites matrimoniales"
     },
     {
       title: "Inscripción de recién nacido",
       description: "Trámites para inscribir a un recién nacido en el Registro Civil"
     },
     {
-      title: "Matrimonio civil en Elche",
-      description: "Información sobre celebración de matrimonios civiles"
+      title: "Juramentos y promesas",
+      description: "Información sobre juramentos y promesas en el Registro Civil"
     },
     {
-      title: "Consultas sobre matrimonio",
-      description: "Asesoramiento sobre trámites matrimoniales"
+      title: "Matrimonio civil",
+      description: "Información sobre celebración de matrimonios civiles en Elche"
+    },
+    {
+      title: "Nacionalidades",
+      description: "Gestión de expedientes y trámites de nacionalidad española"
     },
     {
       title: "Cambio de nombre y apellidos",
-      description: "Procedimiento para modificar nombre y apellidos"
-    },
-    {
-      title: "Trámites de nacionalidad",
-      description: "Gestión de expedientes de nacionalidad española"
-    },
-    {
-      title: "Juramentos y promesas",
-      description: "Información sobre juramentos en el Registro Civil"
-    },
-    {
-      title: "Ley del Registro Civil",
-      description: "Marco legal y normativa aplicable"
+      description: "Procedimiento para modificar y rectificar nombre y apellidos"
     }
   ];
 
