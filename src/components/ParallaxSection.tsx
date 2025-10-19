@@ -52,14 +52,14 @@ const ParallaxSection = ({ imageSrc, imageAlt, children, speed = 0.5 }: Parallax
       <div 
         className="absolute inset-0 will-change-transform"
         style={{
-          transform: `translateY(${offset * -0.3}px)`,
+          transform: `translateY(${offset * -0.15}px)`,
           transition: 'transform 0.1s ease-out',
         }}
       >
         <img
           src={imageSrc}
           alt={imageAlt}
-          className="w-full min-h-[150%] h-[150%] object-cover object-center"
+          className="w-full h-[200%] object-cover object-center"
           loading="eager"
           fetchPriority="high"
           decoding="async"
