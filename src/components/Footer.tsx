@@ -52,7 +52,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t">
           <div className="text-center text-sm text-muted-foreground space-y-2">
             <p className="font-medium">
-              Portal privado de información sobre registros civiles. Trabajamos con independencia del Ministerio de Justicia y otra administración pública.
+              Portal privado de información sobre registros civiles. Trabajamos con independencia del Ministerio de Justicia y cualquier otra administración pública.
             </p>
             <p>© {new Date().getFullYear()} RegistroCivilElche.es - Toda la información es orientativa.</p>
             <p>
