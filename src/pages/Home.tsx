@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, MapPin, Clock, Phone, Info, AlertCircle, Building2, CheckCircle, Scale } from "lucide-react";
+import { FileText, MapPin, Clock, Info, AlertCircle, Building2, CheckCircle, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
