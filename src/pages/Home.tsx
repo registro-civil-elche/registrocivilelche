@@ -50,20 +50,8 @@ const HomePage = () => {
       description: "Trámites para inscribir a un recién nacido en el Registro Civil de Elche"
     },
     {
-      title: "Juramento de nacionalidad española",
-      description: "Información sobre el juramento o promesa de nacionalidad española en Elche"
-    },
-    {
       title: "Matrimonio civil en Elche",
       description: "Información sobre celebración de matrimonios civiles en el Registro Civil"
-    },
-    {
-      title: "Nacionalidades",
-      description: "Gestión de expedientes y trámites de nacionalidad española"
-    },
-    {
-      title: "Cambio de nombre y apellidos",
-      description: "Procedimiento para modificar y rectificar nombre y apellidos"
     }
   ];
 
@@ -155,9 +143,8 @@ const HomePage = () => {
                 {/* Info Section */}
                 <div className="space-y-6">
                   <p className="text-lg text-muted-foreground">
-                    En la oficina del <strong>Registro Civil de Elche</strong> se puede solicitar certificaciones de nacimiento, defunción y matrimonio. 
-                    También se realizan inscripciones de recién nacidos, matrimonios civiles, consultas matrimoniales, trámites de nacionalidad, 
-                    juramentos de nacionalidad española y cambios de nombre y apellidos.
+                    En la oficina del <strong>Registro Civil de Elche</strong> se puede solicitar <strong>certificaciones de nacimiento, defunción y matrimonio</strong>. 
+                    También se realizan <strong>inscripciones de recién nacidos</strong>, <strong>matrimonios civiles</strong> y <strong>consultas matrimoniales</strong>.
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Para <strong>cita previa en el Registro Civil de Elche</strong> o información sobre disponibilidad, 
@@ -258,7 +245,8 @@ const HomePage = () => {
                       ¿Necesitas ayuda profesional con tus trámites?
                     </h2>
                     <p className="text-lg text-muted-foreground mb-2">
-                      Los procedimientos del Registro Civil pueden ser complejos y requerir asesoramiento legal especializado.
+                      Los procedimientos del Registro Civil pueden ser complejos. Para trámites especializados como nacionalidad, herencias, 
+                      o cualquier asesoramiento legal, contacta con profesionales expertos.
                     </p>
                   </div>
 
@@ -275,7 +263,7 @@ const HomePage = () => {
                       </div>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Gestión de certificados y documentación</span>
+                        <span>Gestión de certificados y documentación del Registro Civil</span>
                       </div>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
@@ -283,11 +271,11 @@ const HomePage = () => {
                       </div>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Trámites de nacionalidad</span>
+                        <span>Trámites de herencias y sucesiones</span>
                       </div>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Procedimientos de rectificación</span>
+                        <span>Nacionalidad y extranjería</span>
                       </div>
                     </div>
                   </div>
