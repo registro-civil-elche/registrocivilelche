@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,8 +19,13 @@ const Navbar = () => {
     }
   };
 
+  const certificateLinks = [
+    { name: "Nacimiento", href: "/certificado-nacimiento" },
+    { name: "Matrimonio", href: "/certificado-matrimonio" },
+    { name: "Defunción", href: "/certificado-defuncion" },
+  ];
+
   const navLinks = [
-    { name: "Certificados", href: "#certificados" },
     { name: "Información", href: "#informacion" },
     { name: "Ubicación", href: "#ubicacion" },
   ];
@@ -34,6 +45,26 @@ const Navbar = () => {
             >
               Inicio
             </Link>
+            
+            <DropdownMenu>
+              <DropdownMenuTrigger className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none">
+                Certificados
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border shadow-md z-50">
+                {certificateLinks.map((cert) => (
+                  <DropdownMenuItem key={cert.href} asChild>
+                    <Link 
+                      to={cert.href}
+                      className="cursor-pointer"
+                    >
+                      {cert.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -73,6 +104,21 @@ const Navbar = () => {
               >
                 Inicio
               </Link>
+              
+              <div className="space-y-2">
+                <p className="text-sm font-medium text-muted-foreground px-2">Certificados</p>
+                {certificateLinks.map((cert) => (
+                  <Link
+                    key={cert.href}
+                    to={cert.href}
+                    className="text-sm pl-4 block transition-colors hover:text-primary"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {cert.name}
+                  </Link>
+                ))}
+              </div>
+
               {navLinks.map((link) => (
                 <button
                   key={link.href}
