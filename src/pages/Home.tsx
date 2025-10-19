@@ -151,8 +151,8 @@ const HomePage = () => {
                 Registro en Elche
               </h2>
               
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                {/* Left Column - Info */}
+              <div className="space-y-8">
+                {/* Info Section */}
                 <div className="space-y-6">
                   <p className="text-lg text-muted-foreground">
                     En la oficina del Registro Civil de Elche se puede solicitar certificaciones de nacimiento, defunción y matrimonio. 
@@ -172,7 +172,7 @@ const HomePage = () => {
                   </div>
                 </div>
 
-                {/* Right Column - Contact & Location */}
+                {/* Location & Contact Section */}
                 <div id="ubicacion" className="space-y-6">
                   <Card className="border-2">
                     <CardHeader>
