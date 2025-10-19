@@ -2,13 +2,58 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, CheckCircle, AlertCircle, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const CertificadoNacimiento = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tarda el certificado de nacimiento en Elche?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El tiempo de entrega del certificado de nacimiento depende del método: presencialmente entre 24-48 horas hábiles en el Registro Civil de Elche, por correo postal hasta 15 días hábiles, y online (Sede Electrónica) entre 5-10 días hábiles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es el certificado literal de nacimiento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El certificado literal de nacimiento incluye todos los datos completos de la inscripción de nacimiento, mientras que el extracto es una versión resumida con los datos más relevantes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde solicitar certificado de nacimiento en Elche?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puedes solicitarlo presencialmente en el Registro Civil de Elche (Calle Eucalipto 21), por correo postal, o a través de la Sede Electrónica del Ministerio de Justicia con certificado digital."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Certificado de Nacimiento en Elche - Cómo Solicitarlo, Plazos y Requisitos 2025</title>
+        <meta name="description" content="Guía completa para solicitar certificado literal o extracto de nacimiento en el Registro Civil de Elche. Documentación necesaria, plazos de entrega 24-48h, y dónde tramitarlo. Asesoramiento profesional disponible." />
+        <link rel="canonical" href="https://registrocivilelche.es/certificado-nacimiento" />
+        <meta property="og:title" content="Certificado de Nacimiento en Elche - Guía Completa 2025" />
+        <meta property="og:description" content="Información actualizada sobre cómo solicitar certificado de nacimiento literal o extracto en el Registro Civil de Elche. Plazos y documentación." />
+        <meta property="og:url" content="https://registrocivilelche.es/certificado-nacimiento" />
+        <meta property="og:type" content="article" />
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
       <Navbar />
       
       <main>
@@ -16,9 +61,10 @@ const CertificadoNacimiento = () => {
         <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Link to="/" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6">
-                ← Volver al inicio
-              </Link>
+              <Breadcrumb items={[
+                { name: "Inicio", href: "/" },
+                { name: "Certificado de Nacimiento", href: "/certificado-nacimiento" }
+              ]} />
               <div className="text-center">
                 <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-full mb-6">
                   <FileText className="h-12 w-12 text-primary" />
@@ -161,6 +207,35 @@ const CertificadoNacimiento = () => {
                   desde su expedición para trámites oficiales.
                 </AlertDescription>
               </Alert>
+
+              {/* Cross-linking to other certificates */}
+              <Card className="bg-muted/30">
+                <CardHeader>
+                  <CardTitle className="text-xl">Otros certificados que pueden interesarte</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <Link to="/certificado-matrimonio" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Certificado de Matrimonio</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Cómo solicitar tu partida de matrimonio en Elche</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/certificado-defuncion" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Certificado de Defunción</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Información sobre certificados de defunción</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* Professional Help CTA */}
               <Card className="border-2 border-primary/20 shadow-lg">

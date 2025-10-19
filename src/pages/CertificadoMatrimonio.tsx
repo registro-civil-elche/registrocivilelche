@@ -2,13 +2,58 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, CheckCircle, AlertCircle, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Breadcrumb from "@/components/Breadcrumb";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
 const CertificadoMatrimonio = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tarda el certificado de matrimonio en Elche?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El tiempo de expedición del certificado de matrimonio varía según el método: presencialmente entre 24-48 horas hábiles en el Registro Civil de Elche, por correo postal hasta 15 días hábiles, y vía telemática entre 5-10 días hábiles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Quién puede solicitar un certificado de matrimonio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pueden solicitarlo cualquiera de los cónyuges, descendientes, ascendientes o herederos, y representante legal debidamente autorizado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde pedir certificado de matrimonio en Elche?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puedes solicitarlo en persona en el Registro Civil de Elche (Calle Eucalipto 21), por correo postal, o telemáticamente a través de la Sede Electrónica con certificado digital."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Certificado de Matrimonio en Elche - Solicitud, Documentación y Plazos 2025</title>
+        <meta name="description" content="Cómo solicitar certificado de matrimonio actualizado en el Registro Civil de Elche. Guía completa con requisitos, documentación necesaria, plazos de 24-48h y formas de tramitación. Asesoría legal especializada." />
+        <link rel="canonical" href="https://registrocivilelche.es/certificado-matrimonio" />
+        <meta property="og:title" content="Certificado de Matrimonio en Elche - Guía Completa 2025" />
+        <meta property="og:description" content="Información detallada sobre cómo obtener tu certificado de matrimonio actualizado en el Registro Civil de Elche. Requisitos y plazos." />
+        <meta property="og:url" content="https://registrocivilelche.es/certificado-matrimonio" />
+        <meta property="og:type" content="article" />
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
       <Navbar />
       
       <main>
@@ -16,9 +61,10 @@ const CertificadoMatrimonio = () => {
         <section className="bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Link to="/" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6">
-                ← Volver al inicio
-              </Link>
+              <Breadcrumb items={[
+                { name: "Inicio", href: "/" },
+                { name: "Certificado de Matrimonio", href: "/certificado-matrimonio" }
+              ]} />
               <div className="text-center">
                 <div className="inline-flex items-center justify-center p-4 bg-primary/10 rounded-full mb-6">
                   <FileText className="h-12 w-12 text-primary" />
@@ -184,6 +230,35 @@ const CertificadoMatrimonio = () => {
                   para la mayoría de trámites administrativos.
                 </AlertDescription>
               </Alert>
+
+              {/* Cross-linking to other certificates */}
+              <Card className="bg-muted/30">
+                <CardHeader>
+                  <CardTitle className="text-xl">Otros certificados que pueden interesarte</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <Link to="/certificado-nacimiento" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Certificado de Nacimiento</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Solicita tu certificado literal de nacimiento</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/certificado-defuncion" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Certificado de Defunción</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Información sobre certificados de defunción</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
 
               {/* Professional Help CTA */}
               <Card className="border-2 border-primary/20 shadow-lg">
