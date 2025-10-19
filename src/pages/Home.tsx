@@ -96,7 +96,7 @@ const HomePage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Solicitar Certificados en el Registro Civil de Elche
+                Solicitar certificados en el Registro Civil de Elche
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Cómo pedir certificado literal de nacimiento, partida de matrimonio y defunción en Elche
@@ -176,8 +176,7 @@ const HomePage = () => {
                     <CardContent className="space-y-3">
                       <p className="text-sm">
                         El <strong>Registro Civil de Elche</strong> se encuentra en la <strong>calle Eucalipto 21, 03203 Elche</strong>, en la Ciudad de la Justicia, 
-                        próximo al Hospital General Universitario de Elche e ligeramente más lejos está la comisaría de policía. 
-                        Adjunto se encuentra el Juzgado de Instrucción número 1.
+                        próximo al Hospital General Universitario de Elche y a la comisaría de policía nacional de Elche.
                       </p>
                       <div className="pt-2">
                         <p className="font-semibold mb-1">Dirección completa:</p>
