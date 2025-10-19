@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import elchePanorama from "@/assets/elche-panorama-optimized.webp";
 
 const HomePage = () => {
   const certificates = [
@@ -67,11 +66,9 @@ const HomePage = () => {
         <meta property="og:description" content="Toda la información sobre el Registro Civil de Elche: certificados de nacimiento, matrimonio y defunción, cita previa, ubicación en Calle Eucalipto 21 y contacto." />
         <meta property="og:url" content="https://registrocivilelche.es/" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={elchePanorama} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Registro Civil de Elche - Certificados y Cita Previa" />
         <meta name="twitter:description" content="Información completa sobre trámites, certificados y cita previa del Registro Civil de Elche." />
-        <meta name="twitter:image" content={elchePanorama} />
       </Helmet>
       
       {/* Skip to main content for keyboard navigation */}
@@ -100,17 +97,6 @@ const HomePage = () => {
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24 overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <img 
-              src={elchePanorama} 
-              alt="Vista panorámica de Elche, ciudad donde se encuentra el Registro Civil" 
-              className="w-full h-full object-cover"
-              loading="eager"
-              fetchPriority="high"
-              width="1920"
-              height="1080"
-            />
-          </div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-primary/10 rounded-full backdrop-blur-sm">
