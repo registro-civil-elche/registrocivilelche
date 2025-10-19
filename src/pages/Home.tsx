@@ -12,19 +12,19 @@ const HomePage = () => {
       icon: FileText,
       title: "Certificado de Nacimiento",
       description: "Solicita tu certificado de nacimiento literal o extracto",
-      href: "#certificados"
+      href: "/certificado-nacimiento"
     },
     {
       icon: FileText,
       title: "Certificado de Matrimonio",
       description: "Obtén tu certificado de matrimonio actualizado",
-      href: "#certificados"
+      href: "/certificado-matrimonio"
     },
     {
       icon: FileText,
       title: "Certificado de Defunción",
       description: "Tramita certificados de defunción",
-      href: "#certificados"
+      href: "/certificado-defuncion"
     }
   ];
 
@@ -119,22 +119,24 @@ const HomePage = () => {
               {certificates.map((cert, index) => {
                 const Icon = cert.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-all border-2 hover:border-primary/50 group cursor-pointer">
-                    <CardHeader className="text-center">
-                      <div className="mb-4 inline-flex p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors mx-auto">
-                        <Icon className="h-8 w-8 text-primary" />
-                      </div>
-                      <CardTitle className="text-xl mb-2">{cert.title}</CardTitle>
-                      <CardDescription className="text-base">
-                        {cert.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="text-center">
-                      <Button className="w-full" variant="outline">
-                        Más información
-                      </Button>
-                    </CardContent>
-                  </Card>
+                  <Link key={index} to={cert.href}>
+                    <Card className="hover:shadow-lg transition-all border-2 hover:border-primary/50 group cursor-pointer h-full">
+                      <CardHeader className="text-center">
+                        <div className="mb-4 inline-flex p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors mx-auto">
+                          <Icon className="h-8 w-8 text-primary" />
+                        </div>
+                        <CardTitle className="text-xl mb-2">{cert.title}</CardTitle>
+                        <CardDescription className="text-base">
+                          {cert.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="text-center">
+                        <Button className="w-full" variant="outline">
+                          Más información
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 );
               })}
             </div>
@@ -142,7 +144,7 @@ const HomePage = () => {
         </section>
 
         {/* Registry Information */}
-        <section className="py-16 bg-muted/30">
+        <section id="informacion" className="py-16 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -171,7 +173,7 @@ const HomePage = () => {
                 </div>
 
                 {/* Right Column - Contact & Location */}
-                <div className="space-y-6">
+                <div id="ubicacion" className="space-y-6">
                   <Card className="border-2">
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
