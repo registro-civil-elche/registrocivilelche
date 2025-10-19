@@ -6,6 +6,8 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import ParallaxSection from "@/components/ParallaxSection";
+import juzgadosElche from "@/assets/juzgados-elche.webp";
 
 const HomePage = () => {
   const certificates = [
@@ -152,6 +154,29 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+
+        {/* Parallax Section - Juzgados de Elche */}
+        <ParallaxSection 
+          imageSrc={juzgadosElche}
+          imageAlt="Edificio de los Juzgados de Elche donde se encuentra el Registro Civil"
+          speed={0.5}
+        >
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-full mb-6 backdrop-blur-sm">
+              <Building2 className="h-8 w-8 text-primary" aria-hidden="true" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ciudad de la Justicia de Elche
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-4">
+              El <strong>Registro Civil de Elche</strong> se encuentra ubicado en el edificio de los <strong>Juzgados de Elche</strong>, 
+              también conocido como Ciudad de la Justicia, en la <strong>Calle Eucalipto 21</strong>.
+            </p>
+            <p className="text-base text-muted-foreground">
+              Un moderno complejo judicial que centraliza todos los servicios relacionados con la administración de justicia y el registro civil en Elche.
+            </p>
+          </div>
+        </ParallaxSection>
 
         {/* Registry Information */}
         <section id="informacion" className="py-16 bg-muted/30">
