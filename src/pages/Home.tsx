@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import elchePanorama from "@/assets/elche-panorama.webp";
+import elchePanorama from "@/assets/elche-panorama-optimized.webp";
 
 const HomePage = () => {
   const certificates = [
@@ -107,6 +107,8 @@ const HomePage = () => {
               className="w-full h-full object-cover"
               loading="eager"
               fetchPriority="high"
+              width="1920"
+              height="1080"
             />
           </div>
           <div className="container mx-auto px-4 relative z-10">
