@@ -105,10 +105,10 @@ const HomePage = () => {
         >
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}>
-              Registro Civil de Elche, Alicante
+              Registro Civil de Elche
             </h1>
             <p className="text-lg text-white" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}>
-              C/ Eucalipto - 21, Elche
+              C/ Eucalipto - 21, Elche (Alicante)
             </p>
             <p className="text-lg text-white" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}>
               Información actualizada sobre cita previa, certificados de nacimiento, matrimonio y defunción
