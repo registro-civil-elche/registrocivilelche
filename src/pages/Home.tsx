@@ -108,7 +108,7 @@ const HomePage = () => {
               Registro Civil de Elche
             </h1>
             <p className="text-lg text-white" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}>
-              C/ Eucalipto - 21, Elche (Alicante)
+              C/ Abogados de Atocha - 21, Elche (Alicante)
             </p>
             <p className="text-lg text-white" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}>
               Información actualizada sobre cita previa, certificados de nacimiento, matrimonio y defunción
@@ -200,12 +200,12 @@ const HomePage = () => {
                     </CardHeader>
                     <CardContent className="space-y-3">
                       <p className="text-sm">
-                        El <strong>Registro Civil de Elche</strong> se encuentra en la <strong>calle Eucalipto 21, 03203 Elche</strong>, en la Ciudad de la Justicia, 
+                        El <strong>Registro Civil de Elche</strong> se encuentra en la <strong>calle Abogados de Atocha 21, 03203 Elche</strong>, en la Ciudad de la Justicia, 
                         próximo al Hospital General Universitario de Elche y a la comisaría de policía nacional de Elche.
                       </p>
                       <div className="pt-2">
                         <p className="font-semibold mb-1">Dirección completa:</p>
-                        <p className="text-sm text-muted-foreground">Calle Eucalipto, 21</p>
+                        <p className="text-sm text-muted-foreground">Calle Abogados de Atocha, 21</p>
                         <p className="text-sm text-muted-foreground">03203 Elche, Alicante</p>
                         <p className="text-sm text-muted-foreground mt-2">
                           <strong>Nota:</strong> Para cita previa en el Registro Civil de Elche o consultar teléfono de contacto, 
