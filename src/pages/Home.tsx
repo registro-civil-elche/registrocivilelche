@@ -107,8 +107,8 @@ const HomePage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}>
               Registro Civil de Elche, Alicante
             </h1>
-            <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto text-white" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}>
-              Ubicado en el edificio de los <strong>Juzgados de Elche</strong>, <strong>Calle Eucalipto 21</strong>
+            <p className="text-lg text-white" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}>
+              C/ Eucalipto - 21, Elche
             </p>
             <p className="text-lg text-white" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}>
               Información actualizada sobre cita previa, certificados de nacimiento, matrimonio y defunción
