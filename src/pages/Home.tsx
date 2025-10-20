@@ -62,10 +62,10 @@ const HomePage = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>Registro Civil de Elche - Certificados, Cita Previa y Trámites | Información Actualizada 2025</title>
-        <meta name="description" content="Información completa del Registro Civil de Elche: cómo solicitar certificados de nacimiento, matrimonio y defunción, cita previa, ubicación en Calle Eucalipto 21, teléfono y horarios. Asesoramiento profesional disponible." />
+        <meta name="description" content="Información completa del Registro Civil de Elche: cómo solicitar certificados de nacimiento, matrimonio y defunción, cita previa, ubicación en Calle Abogados de Atocha 21, teléfono y horarios. Asesoramiento profesional disponible." />
         <link rel="canonical" href="https://registrocivilelche.es/" />
         <meta property="og:title" content="Registro Civil de Elche - Certificados y Cita Previa | Información Actualizada" />
-        <meta property="og:description" content="Toda la información sobre el Registro Civil de Elche: certificados de nacimiento, matrimonio y defunción, cita previa, ubicación en Calle Eucalipto 21 y contacto." />
+        <meta property="og:description" content="Toda la información sobre el Registro Civil de Elche: certificados de nacimiento, matrimonio y defunción, cita previa, ubicación en Calle Abogados de Atocha 21 y contacto." />
         <meta property="og:url" content="https://registrocivilelche.es/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
