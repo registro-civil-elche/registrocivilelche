@@ -334,7 +334,7 @@ const HomePage = () => {
                   </div>
 
                   <div className="text-center">
-                    <Button asChild size="lg" className="w-full sm:w-auto text-base sm:text-lg px-4 sm:px-8">
+                    <Button asChild className="flex w-full sm:inline-flex sm:w-auto whitespace-normal text-center leading-snug py-3 px-4 text-base">
                       <a href="https://masanet.es" target="_blank" rel="noopener noreferrer">
                         Contactar con Estudio Jurídico Masanet →
                       </a>
