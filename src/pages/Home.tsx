@@ -90,7 +90,7 @@ const HomePage = () => {
             <Alert className="border-primary/50 bg-primary/5">
               <AlertCircle className="h-4 w-4 text-primary" />
               <AlertDescription className="text-sm">
-                <strong>Portal informativo no oficial.</strong> Esta es una web independiente de información sobre el Registro Civil de Elche. 
+                <strong>Portal informativo no oficial.</strong> Información independiente sobre el Registro Civil de Elche. 
                 Trabajamos con independencia del Ministerio de Justicia y cualquier otra administración pública.
               </AlertDescription>
             </Alert>
