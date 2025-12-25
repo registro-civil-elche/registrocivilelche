@@ -114,7 +114,7 @@ const Footer = () => {
             <p className="font-medium">
               Portal privado de información sobre registros civiles. Trabajamos con independencia del Ministerio de Justicia y cualquier otra administración pública.
             </p>
-            <p>© {new Date().getFullYear()} RegistroCivilElche.es - Toda la información es orientativa.</p>
+            <p>© {new Date().getFullYear()} registrocivilelche.es - Toda la información es orientativa.</p>
             <p>
               Web diseñada por{" "}
               <a
