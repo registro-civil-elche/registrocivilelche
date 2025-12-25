@@ -90,6 +90,16 @@ const Footer = () => {
                   OMAC Elche
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://latinosenelche.es"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  Latinos en Elche
+                </a>
+              </li>
             </ul>
           </div>
         </div>
