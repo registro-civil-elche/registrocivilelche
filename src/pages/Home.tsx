@@ -103,14 +103,11 @@ const HomePage = () => {
       
       <main id="main-content">
         {/* Disclaimer Banner */}
-        <div className="bg-muted/50 border-b">
-          <div className="container mx-auto px-4 py-3">
-            <Alert className="border-primary/50 bg-primary/5">
-              <AlertCircle className="h-4 w-4 text-primary" />
-              <AlertDescription className="text-sm">
-                <strong>Portal informativo no oficial.</strong>
-              </AlertDescription>
-            </Alert>
+        <div className="bg-muted/30 border-b py-1.5">
+          <div className="container mx-auto px-4">
+            <p className="text-xs text-muted-foreground text-center">
+              Portal informativo no oficial
+            </p>
           </div>
         </div>
 
