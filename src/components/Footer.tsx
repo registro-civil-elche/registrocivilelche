@@ -16,13 +16,7 @@ const Footer = () => {
   return (
     <footer className="border-t bg-muted/30 mt-20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-3">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Registro Civil de Elche</h3>
-            <p className="text-sm text-muted-foreground">
-              Portal informativo no oficial sobre el Registro Civil de Elche. Información actualizada sobre certificados, trámites y procedimientos.
-            </p>
-          </div>
+        <div className="grid gap-8 md:grid-cols-2">
 
           <div>
             <h4 className="font-semibold mb-4">Certificados</h4>
