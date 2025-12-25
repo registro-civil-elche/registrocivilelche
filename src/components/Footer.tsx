@@ -77,6 +77,20 @@ const Footer = () => {
             >
               Estudio Jurídico Masanet →
             </a>
+            
+            <h4 className="font-semibold mb-4 mt-6">Otros recursos útiles</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="https://omacelche.es"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  OMAC Elche
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
