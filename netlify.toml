@@ -9,7 +9,7 @@
   skip_processing = false
 
 [build.processing.html]
-  pretty_urls = true
+  pretty_urls = false
 
 # Headers for SEO and caching
 [[headers]]
