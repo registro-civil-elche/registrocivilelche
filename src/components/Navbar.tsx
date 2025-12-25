@@ -38,6 +38,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Información", href: "#informacion" },
     { name: "Ubicación", href: "#ubicacion" },
+    { name: "FAQ", href: "/preguntas-frecuentes", isLink: true },
   ];
 
   return (
@@ -77,14 +78,24 @@ const Navbar = () => {
             </DropdownMenu>
 
             {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollToSection(link.href)}
-                className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
-                aria-label={`Ir a sección ${link.name}`}
-              >
-                {link.name}
-              </button>
+              link.isLink ? (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="text-sm font-medium transition-colors hover:text-primary"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <button
+                  key={link.href}
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
+                  aria-label={`Ir a sección ${link.name}`}
+                >
+                  {link.name}
+                </button>
+              )
             ))}
             <Button asChild size="sm">
               <a 
@@ -135,16 +146,27 @@ const Navbar = () => {
               </div>
 
               {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => {
-                    scrollToSection(link.href);
-                    setIsOpen(false);
-                  }}
-                  className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0 text-left"
-                >
-                  {link.name}
-                </button>
+                link.isLink ? (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="text-sm font-medium transition-colors hover:text-primary"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <button
+                    key={link.href}
+                    onClick={() => {
+                      scrollToSection(link.href);
+                      setIsOpen(false);
+                    }}
+                    className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0 text-left"
+                  >
+                    {link.name}
+                  </button>
+                )
               ))}
               <Button asChild size="sm" className="w-full">
                 <a 

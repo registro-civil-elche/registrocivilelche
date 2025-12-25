@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import CertificadoNacimiento from "./pages/CertificadoNacimiento";
 import CertificadoMatrimonio from "./pages/CertificadoMatrimonio";
 import CertificadoDefuncion from "./pages/CertificadoDefuncion";
+import PreguntasFrecuentes from "./pages/PreguntasFrecuentes";
 import NotFound from "./pages/NotFound";
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/certificado-nacimiento" element={<CertificadoNacimiento />} />
           <Route path="/certificado-matrimonio" element={<CertificadoMatrimonio />} />
           <Route path="/certificado-defuncion" element={<CertificadoDefuncion />} />
+          <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
