@@ -30,32 +30,8 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-# Specific redirects for pages with static HTML (SEO)
-# These serve the static HTML files with correct meta tags
-[[redirects]]
-  from = "/certificado-nacimiento"
-  to = "/certificado-nacimiento/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/certificado-defuncion"
-  to = "/certificado-defuncion/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/certificado-matrimonio"
-  to = "/certificado-matrimonio/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/preguntas-frecuentes"
-  to = "/preguntas-frecuentes/index.html"
-  status = 200
-
-# Catch-all for SPA routing (other routes)
-# force = false means existing files take priority
+# SPA routing - all routes serve index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = false
