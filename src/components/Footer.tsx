@@ -61,6 +61,11 @@ const Footer = () => {
                   Ubicación y Contacto
                 </button>
               </li>
+              <li>
+                <Link to="/preguntas-frecuentes" className="text-muted-foreground hover:text-primary">
+                  Preguntas Frecuentes
+                </Link>
+              </li>
             </ul>
           </div>
 
