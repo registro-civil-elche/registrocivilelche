@@ -23,9 +23,14 @@ const Navbar = () => {
   };
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.querySelector(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (location.pathname !== '/') {
+      // Si no estamos en Home, navegar primero y luego hacer scroll
+      navigate('/', { state: { scrollTo: sectionId } });
+    } else {
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 

@@ -1,15 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, MapPin, Clock, Info, AlertCircle, Building2, CheckCircle, Scale } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import ParallaxSection from "@/components/ParallaxSection";
 import juzgadosElche from "@/assets/juzgados-elche-hq.webp";
+import { useEffect } from "react";
 
 const HomePage = () => {
+  const location = useLocation();
+
+  // Handle scroll to section when navigating from another page
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const sectionId = location.state.scrollTo;
+      // Small delay to ensure the page has rendered
+      setTimeout(() => {
+        const element = document.querySelector(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+      // Clear the state to prevent scrolling on subsequent renders
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state]);
   const certificates = [
     {
       icon: FileText,
