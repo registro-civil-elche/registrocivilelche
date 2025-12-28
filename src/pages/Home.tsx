@@ -227,6 +227,33 @@ const HomePage = () => {
                   </Card>
                 </div>
 
+                {/* Google Maps Embed */}
+                <Card className="border-2">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <MapPin className="h-5 w-5 text-primary" aria-hidden="true" />
+                      Cómo llegar al Registro Civil de Elche
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="aspect-video w-full rounded-lg overflow-hidden">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3130.847762367826!2d-0.6928!3d38.2629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63b7f9c5c9b5c5%3A0x1234567890abcdef!2sCalle%20Abogados%20de%20Atocha%2C%2021%2C%2003203%20Elche%2C%20Alicante!5e0!3m2!1ses!2ses!4v1703760000000!5m2!1ses!2ses"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Ubicación del Registro Civil de Elche en Google Maps"
+                      />
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-3">
+                      El Registro Civil se encuentra en la Ciudad de la Justicia de Elche, con fácil acceso en transporte público y parking cercano.
+                    </p>
+                  </CardContent>
+                </Card>
+
                 <Card className="border-2 bg-primary/5">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
