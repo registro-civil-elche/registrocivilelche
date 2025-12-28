@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, MapPin, Clock, Info, AlertCircle, Building2, CheckCircle, Scale } from "lucide-react";
+import { FileText, MapPin, Clock, Info, CheckCircle, Scale, Flag, Baby, Heart, UserCog, PenLine, FileCheck } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import ParallaxSection from "@/components/ParallaxSection";
 import juzgadosElche from "@/assets/juzgados-elche-hq.webp";
 import { useEffect } from "react";
@@ -13,85 +12,78 @@ import { useEffect } from "react";
 const HomePage = () => {
   const location = useLocation();
 
-  // Handle scroll to section when navigating from another page
   useEffect(() => {
     if (location.state?.scrollTo) {
       const sectionId = location.state.scrollTo;
-      // Small delay to ensure the page has rendered
       setTimeout(() => {
         const element = document.querySelector(sectionId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 100);
-      // Clear the state to prevent scrolling on subsequent renders
       window.history.replaceState({}, document.title);
     }
   }, [location.state]);
-  const certificates = [
-    {
-      icon: FileText,
-      title: "Certificado de Nacimiento",
-      description: "Solicita tu certificado de nacimiento literal o extracto",
-      href: "/certificado-nacimiento"
-    },
-    {
-      icon: FileText,
-      title: "Certificado de Matrimonio",
-      description: "Obtén tu certificado de matrimonio actualizado",
-      href: "/certificado-matrimonio"
-    },
-    {
-      icon: FileText,
-      title: "Certificado de Defunción",
-      description: "Tramita certificados de defunción",
-      href: "/certificado-defuncion"
-    }
-  ];
 
-  const procedures = [
+  const serviceCategories = [
     {
-      title: "Certificado literal de nacimiento en Elche",
-      description: "Solicitar certificado de nacimiento literal o extracto en el Registro Civil"
+      title: "Certificados",
+      icon: FileText,
+      services: [
+        { name: "Certificado de Nacimiento", href: "/certificado-nacimiento", description: "Solicita tu certificado literal o extracto" },
+        { name: "Certificado de Matrimonio", href: "/certificado-matrimonio", description: "Obtén tu partida de matrimonio actualizada" },
+        { name: "Certificado de Defunción", href: "/certificado-defuncion", description: "Tramita certificados de defunción" },
+      ]
     },
     {
-      title: "Partida de matrimonio en Elche",
-      description: "Cómo pedir certificado de matrimonio actualizado"
+      title: "Nacionalidad",
+      icon: Flag,
+      services: [
+        { name: "Jura de Nacionalidad", href: "/jura-nacionalidad", description: "Jura o promesa para adquirir nacionalidad" },
+        { name: "Nacionalidad por Opción", href: "/expediente-nacionalidad-opcion", description: "Para hijos y nietos de españoles" },
+        { name: "Jura Nacionalidad Opción", href: "/jura-nacionalidad-opcion", description: "Jura cuando se adquiere por opción" },
+        { name: "Conservación Nacionalidad", href: "/conservacion-nacionalidad", description: "Mantener o recuperar nacionalidad" },
+        { name: "Simple Presunción", href: "/simple-presuncion-nacionalidad", description: "Acreditar nacionalidad española" },
+      ]
     },
     {
-      title: "Certificado de defunción en Elche",
-      description: "Guía para obtener y tramitar certificados de defunción"
+      title: "Inscripciones",
+      icon: Baby,
+      services: [
+        { name: "Inscripción Recién Nacido", href: "/inscripcion-recien-nacido", description: "Registrar el nacimiento de tu bebé" },
+        { name: "Nacimiento Fuera de Plazo", href: "/inscripcion-nacimiento-fuera-plazo", description: "Inscripción después del plazo legal" },
+        { name: "Reconocimiento de Hijo", href: "/reconocimiento-hijo-no-matrimonial", description: "Filiación de hijo no matrimonial" },
+        { name: "Capitulaciones Matrimoniales", href: "/inscripcion-capitulaciones", description: "Inscribir régimen económico" },
+      ]
     },
     {
-      title: "Consultas sobre matrimonio civil",
-      description: "Asesoramiento sobre matrimonio civil en Elche y trámites matrimoniales"
+      title: "Otros Trámites",
+      icon: UserCog,
+      services: [
+        { name: "Cambio de Nombre", href: "/cambio-nombre", description: "Modificar nombre o apellidos" },
+        { name: "Cambio de Sexo", href: "/cambio-sexo", description: "Cambio de sexo registral" },
+        { name: "Expediente Matrimonio", href: "/expediente-matrimonio", description: "Trámite previo al matrimonio civil" },
+        { name: "Fe de Vida y Estado", href: "/fe-vida-estado", description: "Acreditar que estás vivo y estado civil" },
+        { name: "Rectificación de Error", href: "/rectificacion-error", description: "Corregir errores en inscripciones" },
+      ]
     },
-    {
-      title: "Inscripción de recién nacido",
-      description: "Trámites para inscribir a un recién nacido en el Registro Civil de Elche"
-    },
-    {
-      title: "Matrimonio civil en Elche",
-      description: "Información sobre celebración de matrimonios civiles en el Registro Civil"
-    }
   ];
 
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Registro Civil de Elche - Certificados, Cita Previa y Trámites | Información Actualizada 2025</title>
-        <meta name="description" content="Información completa del Registro Civil de Elche: cómo solicitar certificados de nacimiento, matrimonio y defunción, cita previa, ubicación en Calle Abogados de Atocha 21, teléfono y horarios. Asesoramiento profesional disponible." />
+        <title>Registro Civil de Elche - Certificados, Nacionalidad y Trámites | Información 2025</title>
+        <meta name="description" content="Información completa del Registro Civil de Elche: certificados, nacionalidad, inscripciones, cambio de nombre, matrimonio civil. Ubicación en Calle Abogados de Atocha 21, horarios y cita previa." />
         <link rel="canonical" href="https://registrocivilelche.es/" />
-        <meta property="og:title" content="Registro Civil de Elche - Certificados y Cita Previa | Información Actualizada" />
-        <meta property="og:description" content="Toda la información sobre el Registro Civil de Elche: certificados de nacimiento, matrimonio y defunción, cita previa, ubicación en Calle Abogados de Atocha 21 y contacto." />
+        <meta property="og:title" content="Registro Civil de Elche - Todos los Trámites y Servicios" />
+        <meta property="og:description" content="Guía completa del Registro Civil de Elche: certificados, nacionalidad, inscripciones, cambios de estado civil y más. Asesoramiento profesional disponible." />
         <meta property="og:url" content="https://registrocivilelche.es/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Registro Civil de Elche - Certificados y Cita Previa" />
-        <meta name="twitter:description" content="Información completa sobre trámites, certificados y cita previa del Registro Civil de Elche." />
+        <meta name="twitter:title" content="Registro Civil de Elche - Certificados y Trámites" />
+        <meta name="twitter:description" content="Información completa sobre trámites, certificados y servicios del Registro Civil de Elche." />
       </Helmet>
       
-      {/* Skip to main content for keyboard navigation */}
       <a 
         href="#main-content" 
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded"
@@ -102,7 +94,6 @@ const HomePage = () => {
       <Navbar />
       
       <main id="main-content">
-        {/* Disclaimer Banner */}
         <div className="bg-muted/30 border-b py-1.5">
           <div className="container mx-auto px-4">
             <p className="text-xs text-muted-foreground text-center">
@@ -111,7 +102,6 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Parallax Hero - Juzgados de Elche */}
         <ParallaxSection 
           imageSrc={juzgadosElche}
           imageAlt="Edificio de los Juzgados de Elche donde se encuentra el Registro Civil"
@@ -125,45 +115,49 @@ const HomePage = () => {
               C/ Abogados de Atocha - 21, Elche (Alicante)
             </p>
             <p className="text-lg text-white" style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}>
-              Información actualizada sobre cita previa, certificados de nacimiento, matrimonio y defunción
+              Certificados, nacionalidad, inscripciones y todos los trámites del registro
             </p>
           </div>
         </ParallaxSection>
 
-        {/* Certificates Section */}
-        <section id="certificados" className="py-16 bg-background">
+        {/* All Services Section */}
+        <section id="servicios" className="py-16 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Solicitar certificados en el Registro Civil de Elche
+                Todos los servicios del Registro Civil de Elche
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Cómo pedir certificado literal de nacimiento, partida de matrimonio y defunción en Elche
+                Información completa sobre certificados, nacionalidad, inscripciones y otros trámites
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto mb-12">
-              {certificates.map((cert, index) => {
-                const Icon = cert.icon;
+            <div className="space-y-12 max-w-6xl mx-auto">
+              {serviceCategories.map((category) => {
+                const CategoryIcon = category.icon;
                 return (
-                  <Link key={index} to={cert.href}>
-                    <Card className="hover:shadow-lg transition-all border-2 hover:border-primary/50 group cursor-pointer h-full">
-                      <CardHeader className="text-center">
-                        <div className="mb-4 inline-flex p-4 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors mx-auto">
-                          <Icon className="h-8 w-8 text-primary" aria-hidden="true" />
-                        </div>
-                        <CardTitle className="text-xl mb-2">{cert.title}</CardTitle>
-                        <CardDescription className="text-base">
-                          {cert.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="text-center">
-                        <Button className="w-full" variant="outline" aria-label={`Ver información sobre ${cert.title}`}>
-                          Más información
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  </Link>
+                  <div key={category.title}>
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="p-2 rounded-lg bg-primary/10">
+                        <CategoryIcon className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="text-2xl font-bold">{category.title}</h3>
+                    </div>
+                    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                      {category.services.map((service) => (
+                        <Link key={service.href} to={service.href}>
+                          <Card className="hover:shadow-lg transition-all border hover:border-primary/50 cursor-pointer h-full">
+                            <CardHeader className="pb-2">
+                              <CardTitle className="text-lg">{service.name}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                              <p className="text-sm text-muted-foreground">{service.description}</p>
+                            </CardContent>
+                          </Card>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 );
               })}
             </div>
@@ -179,32 +173,19 @@ const HomePage = () => {
               </h2>
               
               <div className="space-y-8">
-                {/* Info Section */}
                 <div className="space-y-6">
                   <p className="text-lg text-muted-foreground">
-                    En la oficina del <strong>Registro Civil de Elche</strong> se puede solicitar <strong>certificaciones de nacimiento, defunción y matrimonio</strong>. 
-                    También se realizan <strong>inscripciones de recién nacidos</strong>, <strong>matrimonios civiles</strong> y <strong>consultas matrimoniales</strong>.
+                    En la oficina del <strong>Registro Civil de Elche</strong> se pueden realizar múltiples trámites: <strong>certificaciones de nacimiento, defunción y matrimonio</strong>, 
+                    <strong>inscripciones de recién nacidos</strong>, <strong>expedientes de nacionalidad</strong>, <strong>juras de nacionalidad</strong>, 
+                    <strong>cambios de nombre y sexo</strong>, <strong>matrimonios civiles</strong> y mucho más.
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Para <strong>cita previa en el Registro Civil de Elche</strong> o información sobre disponibilidad, 
-                    te recomendamos contactar con el <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Estudio Jurídico Masanet</a> que puede gestionar tus trámites de forma profesional.
+                    Para <strong>cita previa en el Registro Civil de Elche</strong> o gestión profesional de tus trámites, 
+                    contacta con el <a href="https://masanet.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">Estudio Jurídico Masanet</a>.
                   </p>
-
-                    <div className="space-y-4">
-                    {procedures.map((proc, index) => (
-                      <div key={index} className="flex items-start gap-3 p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors">
-                        <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" aria-hidden="true" />
-                        <div>
-                          <h3 className="font-semibold text-foreground mb-1">{proc.title}</h3>
-                          <p className="text-sm text-muted-foreground">{proc.description}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
 
-                {/* Location & Contact Section */}
-                <div id="ubicacion" className="space-y-6">
+                <div id="ubicacion" className="grid gap-6 md:grid-cols-2">
                   <Card className="border-2">
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
@@ -214,17 +195,12 @@ const HomePage = () => {
                     </CardHeader>
                     <CardContent className="space-y-3">
                       <p className="text-sm">
-                        El <strong>Registro Civil de Elche</strong> se encuentra en la <strong>calle Abogados de Atocha 21, 03203 Elche</strong>, en la Ciudad de la Justicia, 
-                        próximo al Hospital General Universitario de Elche y a la comisaría de policía nacional de Elche.
+                        El <strong>Registro Civil de Elche</strong> se encuentra en la <strong>calle Abogados de Atocha 21, 03203 Elche</strong>, en la Ciudad de la Justicia.
                       </p>
                       <div className="pt-2">
                         <p className="font-semibold mb-1">Dirección completa:</p>
                         <p className="text-sm text-muted-foreground">Calle Abogados de Atocha, 21</p>
                         <p className="text-sm text-muted-foreground">03203 Elche, Alicante</p>
-                        <p className="text-sm text-muted-foreground mt-2">
-                          <strong>Nota:</strong> Para cita previa en el Registro Civil de Elche o consultar teléfono de contacto, 
-                          recomendamos contactar con asesoría legal especializada.
-                        </p>
                       </div>
                     </CardContent>
                   </Card>
@@ -239,56 +215,33 @@ const HomePage = () => {
                     <CardContent>
                       <div className="space-y-2 text-sm">
                         <div className="flex justify-between">
-                          <span className="text-muted-foreground">Lunes:</span>
+                          <span className="text-muted-foreground">Lunes a Viernes:</span>
                           <span className="font-medium">9:00 - 13:00</span>
                         </div>
                         <div className="flex justify-between">
-                          <span className="text-muted-foreground">Martes:</span>
-                          <span className="font-medium">9:00 - 13:00</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Miércoles:</span>
-                          <span className="font-medium">9:00 - 13:00</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Jueves:</span>
-                          <span className="font-medium">9:00 - 13:00</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Viernes:</span>
-                          <span className="font-medium">9:00 - 13:00</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Sábado:</span>
-                          <span className="font-medium">Cerrado</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-muted-foreground">Domingo:</span>
+                          <span className="text-muted-foreground">Sábado y Domingo:</span>
                           <span className="font-medium">Cerrado</span>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
-
-                  <Card className="border-2 bg-primary/5">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <Info className="h-5 w-5 text-primary" aria-hidden="true" />
-                        Documentación
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-sm">
-                        <strong>Cosas que debe saber sobre la expedición de documentos:</strong>
-                      </p>
-                      <ul className="text-sm text-muted-foreground mt-2 space-y-1 list-disc list-inside">
-                        <li>Es importante llevar documentación identificativa</li>
-                        <li>Algunos trámites pueden requerir cita previa</li>
-                        <li>Los certificados pueden solicitarse en persona o por correo</li>
-                      </ul>
-                    </CardContent>
-                  </Card>
                 </div>
+
+                <Card className="border-2 bg-primary/5">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Info className="h-5 w-5 text-primary" aria-hidden="true" />
+                      Documentación
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
+                      <li>Es importante llevar documentación identificativa (DNI/NIE)</li>
+                      <li>Algunos trámites requieren cita previa</li>
+                      <li>Los certificados pueden solicitarse en persona, por correo o telemáticamente</li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -308,8 +261,7 @@ const HomePage = () => {
                       ¿Necesitas ayuda profesional con tus trámites?
                     </h2>
                     <p className="text-lg text-muted-foreground mb-2">
-                      Los procedimientos del Registro Civil pueden ser complejos. Para trámites especializados como nacionalidad, herencias, 
-                      o cualquier asesoramiento legal, contacta con profesionales expertos.
+                      Nacionalidad, herencias, certificados o cualquier trámite del Registro Civil. Déjalo en manos de expertos.
                     </p>
                   </div>
 
@@ -330,39 +282,31 @@ const HomePage = () => {
                       </div>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Gestión de certificados y documentación del Registro Civil</span>
+                        <span>Trámites de nacionalidad y extranjería</span>
                       </div>
                       <div className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Asesoramiento legal personalizado</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Trámites de herencias y sucesiones</span>
-                      </div>
-                      <div className="flex items-start gap-2">
-                        <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>Nacionalidad y extranjería</span>
+                        <span>Herencias y sucesiones</span>
                       </div>
                     </div>
                   </div>
 
                   <div className="text-center">
-                    <Button asChild className="flex w-full sm:inline-flex sm:w-auto whitespace-normal text-center leading-snug py-3 px-4 text-base">
-                      <a href="https://masanet.es" target="_blank" rel="noopener noreferrer">
-                        Contactar con Estudio Jurídico Masanet →
+                    <Button asChild size="lg" className="px-8">
+                      <a
+                        href="https://masanet.es"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Contactar con Estudio Jurídico Masanet
                       </a>
                     </Button>
-                    <p className="text-sm text-muted-foreground mt-4">
-                      Consulta profesional para resolver tus dudas legales
-                    </p>
                   </div>
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
-
       </main>
 
       <Footer />

@@ -38,6 +38,46 @@ const ServicePageTemplate = ({
   faqSchema,
   icon: Icon = FileText,
 }: ServicePageProps) => {
+  // Generate automatic FAQ schema if not provided
+  const generatedFaqSchema = faqSchema || {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": `¿Qué es ${title.toLowerCase()}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": whatIs
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `¿Qué requisitos necesito para ${title.toLowerCase()}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": requirements.join(". ")
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `¿Cuál es el procedimiento para ${title.toLowerCase()}?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": process.join(". ")
+        }
+      },
+      {
+        "@type": "Question",
+        "name": `¿Dónde puedo tramitar ${title.toLowerCase()} en Elche?`,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Puede realizar este trámite en el Registro Civil de Elche, ubicado en Calle Abogados de Atocha, 21, 03203 Elche, Alicante. Para asesoramiento profesional, contacte con Estudio Jurídico Masanet."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen">
       <Helmet>
@@ -51,11 +91,9 @@ const ServicePageTemplate = ({
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
-        {faqSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(faqSchema)}
-          </script>
-        )}
+        <script type="application/ld+json">
+          {JSON.stringify(generatedFaqSchema)}
+        </script>
       </Helmet>
 
       <Navbar />
