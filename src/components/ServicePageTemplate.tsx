@@ -2,12 +2,23 @@ import { Helmet } from "react-helmet-async";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { FileText, CheckCircle, AlertCircle, Scale, ArrowRight } from "lucide-react";
+import { FileText, CheckCircle, AlertCircle, Scale, ArrowRight, HelpCircle, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import { LucideIcon } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
 
 interface ServicePageProps {
   title: string;
@@ -20,7 +31,9 @@ interface ServicePageProps {
   requirements: string[];
   process: string[];
   relatedServices: { name: string; href: string }[];
-  faqSchema?: object;
+  faqs?: FAQ[];
+  additionalInfo?: string;
+  tips?: string[];
   icon?: LucideIcon;
 }
 
@@ -35,47 +48,43 @@ const ServicePageTemplate = ({
   requirements,
   process,
   relatedServices,
-  faqSchema,
+  faqs = [],
+  additionalInfo,
+  tips = [],
   icon: Icon = FileText,
 }: ServicePageProps) => {
-  // Generate automatic FAQ schema if not provided
-  const generatedFaqSchema = faqSchema || {
+  // Generate FAQ schema combining custom FAQs with automatic ones
+  const allFaqs: FAQ[] = [
+    {
+      question: `¿Qué es ${title.toLowerCase()}?`,
+      answer: whatIs
+    },
+    {
+      question: `¿Qué requisitos necesito para ${title.toLowerCase()}?`,
+      answer: requirements.join(". ")
+    },
+    {
+      question: `¿Cuál es el procedimiento para ${title.toLowerCase()}?`,
+      answer: process.join(". ")
+    },
+    {
+      question: `¿Dónde puedo tramitar ${title.toLowerCase()} en Elche?`,
+      answer: "Puede realizar este trámite en el Registro Civil de Elche, ubicado en Calle Abogados de Atocha, 21, 03203 Elche, Alicante. El horario de atención es de lunes a viernes de 9:00 a 13:00. Para asesoramiento profesional, contacte con Estudio Jurídico Masanet."
+    },
+    ...faqs
+  ];
+
+  const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": `¿Qué es ${title.toLowerCase()}?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": whatIs
-        }
-      },
-      {
-        "@type": "Question",
-        "name": `¿Qué requisitos necesito para ${title.toLowerCase()}?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": requirements.join(". ")
-        }
-      },
-      {
-        "@type": "Question",
-        "name": `¿Cuál es el procedimiento para ${title.toLowerCase()}?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": process.join(". ")
-        }
-      },
-      {
-        "@type": "Question",
-        "name": `¿Dónde puedo tramitar ${title.toLowerCase()} en Elche?`,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Puede realizar este trámite en el Registro Civil de Elche, ubicado en Calle Abogados de Atocha, 21, 03203 Elche, Alicante. Para asesoramiento profesional, contacte con Estudio Jurídico Masanet."
-        }
+    "mainEntity": allFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
       }
-    ]
+    }))
   };
 
   return (
@@ -92,7 +101,7 @@ const ServicePageTemplate = ({
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
         <script type="application/ld+json">
-          {JSON.stringify(generatedFaqSchema)}
+          {JSON.stringify(faqSchema)}
         </script>
       </Helmet>
 
@@ -126,12 +135,27 @@ const ServicePageTemplate = ({
             </CardContent>
           </Card>
 
+          {/* Additional Info if provided */}
+          {additionalInfo && (
+            <Card className="border-2 bg-muted/30">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Info className="h-5 w-5 text-primary" />
+                  Información importante
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">{additionalInfo}</p>
+              </CardContent>
+            </Card>
+          )}
+
           {/* Requirements */}
           <Card className="border-2">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-primary" />
-                Requisitos
+                Requisitos y documentación necesaria
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -151,7 +175,7 @@ const ServicePageTemplate = ({
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <ArrowRight className="h-5 w-5 text-primary" />
-                Procedimiento
+                Procedimiento paso a paso
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -168,6 +192,54 @@ const ServicePageTemplate = ({
             </CardContent>
           </Card>
 
+          {/* Tips if provided */}
+          {tips.length > 0 && (
+            <Card className="border-2 border-primary/30 bg-primary/5">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Info className="h-5 w-5 text-primary" />
+                  Consejos útiles
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {tips.map((tip, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <span className="text-primary font-bold">•</span>
+                      <span className="text-muted-foreground">{tip}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* FAQ Section */}
+          {faqs.length > 0 && (
+            <Card className="border-2">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <HelpCircle className="h-5 w-5 text-primary" />
+                  Preguntas frecuentes
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <Accordion type="single" collapsible className="w-full">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem key={index} value={`faq-${index}`}>
+                      <AccordionTrigger className="text-left">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </CardContent>
+            </Card>
+          )}
+
           {/* Professional Help Alert */}
           <Alert className="border-primary/50 bg-primary/5">
             <AlertCircle className="h-4 w-4" />
@@ -181,7 +253,7 @@ const ServicePageTemplate = ({
               >
                 Estudio Jurídico Masanet
               </a>{" "}
-              puede gestionar todo el proceso por ti.
+              puede gestionar todo el proceso por ti con más de 20 años de experiencia.
             </AlertDescription>
           </Alert>
 
@@ -214,7 +286,7 @@ const ServicePageTemplate = ({
                 Gestiona tu trámite con profesionales
               </h2>
               <p className="text-muted-foreground mb-6">
-                El Estudio Jurídico Masanet cuenta con más de 20 años de experiencia en trámites del Registro Civil.
+                El Estudio Jurídico Masanet cuenta con más de 20 años de experiencia en trámites del Registro Civil de Elche.
               </p>
               <Button asChild size="lg">
                 <a
