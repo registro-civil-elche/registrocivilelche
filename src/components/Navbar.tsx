@@ -7,6 +7,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
 } from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
@@ -24,7 +26,6 @@ const Navbar = () => {
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
-      // Si no estamos en Home, navegar primero y luego hacer scroll
       navigate('/', { state: { scrollTo: sectionId } });
     } else {
       const element = document.querySelector(sectionId);
@@ -34,10 +35,44 @@ const Navbar = () => {
     }
   };
 
-  const certificateLinks = [
-    { name: "Nacimiento", href: "/certificado-nacimiento" },
-    { name: "Matrimonio", href: "/certificado-matrimonio" },
-    { name: "Defunción", href: "/certificado-defuncion" },
+  const serviceCategories = [
+    {
+      label: "Certificados",
+      items: [
+        { name: "Certificado de Nacimiento", href: "/certificado-nacimiento" },
+        { name: "Certificado de Matrimonio", href: "/certificado-matrimonio" },
+        { name: "Certificado de Defunción", href: "/certificado-defuncion" },
+      ]
+    },
+    {
+      label: "Nacionalidad",
+      items: [
+        { name: "Jura de Nacionalidad", href: "/jura-nacionalidad" },
+        { name: "Nacionalidad por Opción", href: "/expediente-nacionalidad-opcion" },
+        { name: "Jura Nacionalidad Opción", href: "/jura-nacionalidad-opcion" },
+        { name: "Conservación Nacionalidad", href: "/conservacion-nacionalidad" },
+        { name: "Simple Presunción", href: "/simple-presuncion-nacionalidad" },
+      ]
+    },
+    {
+      label: "Inscripciones",
+      items: [
+        { name: "Inscripción Recién Nacido", href: "/inscripcion-recien-nacido" },
+        { name: "Nacimiento Fuera de Plazo", href: "/inscripcion-nacimiento-fuera-plazo" },
+        { name: "Reconocimiento de Hijo", href: "/reconocimiento-hijo-no-matrimonial" },
+        { name: "Capitulaciones Matrimoniales", href: "/inscripcion-capitulaciones" },
+      ]
+    },
+    {
+      label: "Otros Trámites",
+      items: [
+        { name: "Cambio de Nombre", href: "/cambio-nombre" },
+        { name: "Cambio de Sexo", href: "/cambio-sexo" },
+        { name: "Expediente Matrimonio", href: "/expediente-matrimonio" },
+        { name: "Fe de Vida y Estado", href: "/fe-vida-estado" },
+        { name: "Rectificación de Error", href: "/rectificacion-error" },
+      ]
+    },
   ];
 
   const navLinks = [
@@ -55,29 +90,32 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex md:items-center md:space-x-6">
-              <button
-                onClick={handleHomeClick}
-                className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
-                aria-label="Ir a inicio"
-              >
-                Inicio
-              </button>
+            <button
+              onClick={handleHomeClick}
+              className="text-sm font-medium transition-colors hover:text-primary cursor-pointer bg-transparent border-0 p-0"
+              aria-label="Ir a inicio"
+            >
+              Inicio
+            </button>
             
             <DropdownMenu>
               <DropdownMenuTrigger className="inline-flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary focus:outline-none">
-                Certificados
+                Servicios
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background border shadow-md z-50">
-                {certificateLinks.map((cert) => (
-                  <DropdownMenuItem key={cert.href} asChild>
-                    <Link 
-                      to={cert.href}
-                      className="cursor-pointer"
-                    >
-                      {cert.name}
-                    </Link>
-                  </DropdownMenuItem>
+              <DropdownMenuContent className="bg-background border shadow-md z-50 w-64 max-h-[70vh] overflow-y-auto">
+                {serviceCategories.map((category, catIndex) => (
+                  <div key={category.label}>
+                    {catIndex > 0 && <DropdownMenuSeparator />}
+                    <DropdownMenuLabel className="text-xs text-muted-foreground">{category.label}</DropdownMenuLabel>
+                    {category.items.map((item) => (
+                      <DropdownMenuItem key={item.href} asChild>
+                        <Link to={item.href} className="cursor-pointer">
+                          {item.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </div>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
@@ -124,7 +162,7 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="md:hidden pb-4">
+          <div className="md:hidden pb-4 max-h-[80vh] overflow-y-auto">
             <div className="flex flex-col space-y-3">
               <button
                 onClick={() => {
@@ -136,19 +174,21 @@ const Navbar = () => {
                 Inicio
               </button>
               
-              <div className="space-y-2">
-                <p className="text-sm font-medium text-muted-foreground px-2">Certificados</p>
-                {certificateLinks.map((cert) => (
-                  <Link
-                    key={cert.href}
-                    to={cert.href}
-                    className="text-sm pl-4 block transition-colors hover:text-primary"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {cert.name}
-                  </Link>
-                ))}
-              </div>
+              {serviceCategories.map((category) => (
+                <div key={category.label} className="space-y-2">
+                  <p className="text-sm font-medium text-muted-foreground">{category.label}</p>
+                  {category.items.map((item) => (
+                    <Link
+                      key={item.href}
+                      to={item.href}
+                      className="text-sm pl-4 block transition-colors hover:text-primary"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              ))}
 
               {navLinks.map((link) => (
                 link.isLink ? (
