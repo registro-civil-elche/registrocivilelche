@@ -319,13 +319,14 @@ const HomePage = () => {
                   </div>
 
                   <div className="text-center">
-                    <Button asChild size="lg" className="px-8">
+                    <Button asChild size="lg" className="px-8 h-auto py-3 whitespace-normal">
                       <a
                         href="https://masanet.es"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Contactar con Estudio Jurídico Masanet
+                        <span className="block sm:inline">Contactar con</span>{" "}
+                        <span className="block sm:inline">Estudio Jurídico Masanet</span>
                       </a>
                     </Button>
                   </div>
