@@ -325,8 +325,8 @@ const HomePage = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <span className="block sm:inline">Contactar con</span>{" "}
-                        <span className="block sm:inline">Estudio Jurídico Masanet</span>
+                        <span className="block">Contactar con</span>
+                        <span className="block">Estudio Jurídico Masanet</span>
                       </a>
                     </Button>
                   </div>
