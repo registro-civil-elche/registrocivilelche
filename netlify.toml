@@ -30,6 +30,13 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# Remove trailing slashes (except root) - redirect to canonical URLs
+[[redirects]]
+  from = "/*/"
+  to = "/:splat"
+  status = 301
+  force = true
+
 # SPA routing - all routes serve index.html
 [[redirects]]
   from = "/*"
