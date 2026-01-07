@@ -2,121 +2,124 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://registrocivilelche.es/</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Certificados -->
   <url>
     <loc>https://registrocivilelche.es/certificado-nacimiento</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/certificado-matrimonio</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/certificado-defuncion</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Cambios de estado -->
   <url>
     <loc>https://registrocivilelche.es/cambio-nombre</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/cambio-sexo</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Nacionalidad -->
   <url>
     <loc>https://registrocivilelche.es/conservacion-nacionalidad</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/expediente-nacionalidad-opcion</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/jura-nacionalidad</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/jura-nacionalidad-opcion</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/simple-presuncion-nacionalidad</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Inscripciones -->
   <url>
     <loc>https://registrocivilelche.es/inscripcion-recien-nacido</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/inscripcion-nacimiento-fuera-plazo</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/inscripcion-capitulaciones</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/reconocimiento-hijo-no-matrimonial</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Otros trámites -->
   <url>
     <loc>https://registrocivilelche.es/expediente-matrimonio</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/fe-vida-estado</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://registrocivilelche.es/rectificacion-error</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Info -->
   <url>
     <loc>https://registrocivilelche.es/preguntas-frecuentes</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
