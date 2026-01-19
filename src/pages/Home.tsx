@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LazyGoogleMap from "@/components/LazyGoogleMap";
 import ParallaxSection from "@/components/ParallaxSection";
 import juzgadosElche from "@/assets/juzgados-elche-compressed.webp";
 import { useEffect } from "react";
@@ -236,18 +237,10 @@ const HomePage = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="aspect-video w-full rounded-lg overflow-hidden">
-                      <iframe
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Oficina+Registro+Civil,Elche,Spain&zoom=17"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="Ubicación de la Oficina del Registro Civil de Elche en Google Maps"
-                      />
-                    </div>
+                    <LazyGoogleMap
+                      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Oficina+Registro+Civil,Elche,Spain&zoom=17"
+                      title="Ubicación de la Oficina del Registro Civil de Elche en Google Maps"
+                    />
                     <p className="text-sm text-muted-foreground mt-3">
                       El Registro Civil se encuentra en la Ciudad de la Justicia de Elche, con fácil acceso en transporte público y parking cercano.
                     </p>
