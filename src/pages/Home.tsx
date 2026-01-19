@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ParallaxSection from "@/components/ParallaxSection";
-import juzgadosElche from "@/assets/juzgados-elche-optimized.webp";
+import juzgadosElche from "@/assets/juzgados-elche-compressed.webp";
 import { useEffect } from "react";
 
 const HomePage = () => {
