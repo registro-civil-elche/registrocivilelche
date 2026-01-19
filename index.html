@@ -8,6 +8,9 @@
     <!-- Canonical URL se define dinámicamente por cada página via React Helmet -->
     
     <!-- Open Graph -->
+    <!-- Preload LCP image for faster rendering -->
+    <link rel="preload" as="image" href="/src/assets/juzgados-elche-compressed.webp" type="image/webp" fetchpriority="high" />
+    
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://registrocivilelche.es/" />
     <meta property="og:image" content="https://registrocivilelche.es/og-image.png" />
