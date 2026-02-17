@@ -312,7 +312,7 @@ const HomePage = () => {
                   </div>
 
                   <div className="text-center">
-                    <Button asChild size="lg" className="px-8">
+                    <Button asChild size="lg" className="px-8 h-auto py-3 whitespace-normal text-center">
                       <a
                         href="https://masanet.es"
                         target="_blank"
