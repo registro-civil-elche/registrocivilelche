@@ -241,6 +241,24 @@ const CertificadoNacimiento = () => {
                         </div>
                       </div>
                     </Link>
+                    <Link to="/inscripcion-recien-nacido" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Inscripción de Recién Nacido</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Registrar el nacimiento de tu bebé en Elche</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/reconocimiento-hijo-no-matrimonial" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Reconocimiento de Hijo</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Filiación de hijo no matrimonial en el Registro Civil</p>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

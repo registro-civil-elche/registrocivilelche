@@ -264,6 +264,24 @@ const CertificadoMatrimonio = () => {
                         </div>
                       </div>
                     </Link>
+                    <Link to="/expediente-matrimonio" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Expediente de Matrimonio</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Trámite previo obligatorio al matrimonio civil</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/inscripcion-capitulaciones" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Capitulaciones Matrimoniales</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Inscribir el régimen económico del matrimonio</p>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

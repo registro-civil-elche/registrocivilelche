@@ -72,7 +72,7 @@ const ExpedienteNacionalidadOpcion = () => {
       relatedServices={[
         { name: "Jura de Nacionalidad", href: "/jura-nacionalidad" },
         { name: "Jura Nacionalidad Opción", href: "/jura-nacionalidad-opcion" },
-        { name: "Conservación de Nacionalidad", href: "/conservacion-nacionalidad" }
+        { name: "Simple Presunción de Nacionalidad", href: "/simple-presuncion-nacionalidad" }
       ]}
       icon={Flag}
     />

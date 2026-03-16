@@ -70,8 +70,8 @@ const RectificacionError = () => {
       ]}
       relatedServices={[
         { name: "Cambio de Nombre", href: "/cambio-nombre" },
-        { name: "Certificado de Nacimiento", href: "/certificado-nacimiento" },
-        { name: "Certificado de Matrimonio", href: "/certificado-matrimonio" }
+        { name: "Cambio de Sexo", href: "/cambio-sexo" },
+        { name: "Certificado de Nacimiento", href: "/certificado-nacimiento" }
       ]}
       icon={PenLine}
     />

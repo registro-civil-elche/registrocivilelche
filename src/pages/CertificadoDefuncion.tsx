@@ -304,6 +304,24 @@ const CertificadoDefuncion = () => {
                         </div>
                       </div>
                     </Link>
+                    <Link to="/fe-vida-estado" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Fe de Vida y Estado</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Acreditar que una persona está viva y su estado civil</p>
+                        </div>
+                      </div>
+                    </Link>
+                    <Link to="/cambio-nombre" className="p-4 bg-background rounded-lg border hover:border-primary/50 transition-colors group">
+                      <div className="flex items-start gap-3">
+                        <FileText className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <h3 className="font-semibold group-hover:text-primary transition-colors">Cambio de Nombre</h3>
+                          <p className="text-sm text-muted-foreground mt-1">Modificar nombre o invertir orden de apellidos</p>
+                        </div>
+                      </div>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
