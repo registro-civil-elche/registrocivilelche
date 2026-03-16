@@ -65,7 +65,7 @@ const FeVidaEstado = () => {
       ]}
       relatedServices={[
         { name: "Certificado de Nacimiento", href: "/certificado-nacimiento" },
-        { name: "Certificado de Matrimonio", href: "/certificado-matrimonio" },
+        { name: "Certificado de Defunción", href: "/certificado-defuncion" },
         { name: "Expediente de Matrimonio", href: "/expediente-matrimonio" }
       ]}
       icon={FileCheck}
