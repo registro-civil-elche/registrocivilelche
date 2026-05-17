@@ -5,8 +5,8 @@ const ConservacionNacionalidad = () => {
   return (
     <ServicePageTemplate
       title="Conservación y Recuperación de Nacionalidad Española en Elche"
-      metaTitle="Conservación y Recuperación de Nacionalidad Española en Elche | Registro Civil 2025"
-      metaDescription="Información completa sobre conservación y recuperación de la nacionalidad española en el Registro Civil de Elche. Requisitos, Ley de Memoria Democrática y procedimiento."
+      metaTitle="Conservar Nacionalidad Española en Elche"
+      metaDescription="Conservación y recuperación de la nacionalidad española en el Registro Civil de Elche: requisitos, Ley de Memoria Democrática y procedimiento."
       canonicalUrl="https://registrocivilelche.es/conservacion-nacionalidad"
       breadcrumbItems={[
         { name: "Inicio", href: "/" },
