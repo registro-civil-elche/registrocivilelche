@@ -73,8 +73,8 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Registro Civil de Elche - Certificados, Nacionalidad y Trámites | Información 2025</title>
-        <meta name="description" content="Información completa del Registro Civil de Elche: certificados, nacionalidad, inscripciones, cambio de nombre, matrimonio civil. Ubicación en Calle Abogados de Atocha 21, horarios y cita previa." />
+        <title>Registro Civil de Elche: Certificados y Trámites</title>
+        <meta name="description" content="Registro Civil de Elche: certificados, nacionalidad, inscripciones, cambio de nombre y matrimonio civil. Dirección, horarios y cita previa." />
         <link rel="canonical" href="https://registrocivilelche.es/" />
         <meta property="og:title" content="Registro Civil de Elche - Todos los Trámites y Servicios" />
         <meta property="og:description" content="Guía completa del Registro Civil de Elche: certificados, nacionalidad, inscripciones, cambios de estado civil y más. Asesoramiento profesional disponible." />

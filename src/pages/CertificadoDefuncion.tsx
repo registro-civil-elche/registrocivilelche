@@ -43,8 +43,8 @@ const CertificadoDefuncion = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Certificado de Defunción en Elche - Cómo Solicitarlo, Requisitos y Plazos Urgentes 2025</title>
-        <meta name="description" content="Guía completa para tramitar certificados de defunción en el Registro Civil de Elche. Quién puede solicitarlo, documentación necesaria, plazos urgentes 24-48h, y gestión para herencias. Asesoría legal especializada disponible." />
+        <title>Certificado de Defunción en Elche: Cómo Solicitarlo</title>
+<meta name="description" content="Cómo tramitar el certificado de defunción en el Registro Civil de Elche: quién puede pedirlo, documentación, plazos urgentes 24-48h y herencias." />
         <link rel="canonical" href="https://registrocivilelche.es/certificado-defuncion" />
         <meta property="og:title" content="Certificado de Defunción en Elche - Guía Completa 2025" />
         <meta property="og:description" content="Información detallada sobre cómo tramitar certificados de defunción en el Registro Civil de Elche. Requisitos, plazos y gestión urgente." />

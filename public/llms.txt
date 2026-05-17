@@ -1,0 +1,39 @@
+# Registro Civil de Elche
+
+> Portal informativo sobre el Registro Civil de Elche (Alicante, España): certificados, cita previa, trámites de nacionalidad, inscripciones y asesoramiento legal.
+
+El sitio explica cómo realizar los trámites más habituales del Registro Civil de Elche, ubicado en Calle Abogados de Atocha, 21, 03203 Elche (Alicante). Incluye requisitos, documentación, plazos y procedimiento paso a paso para cada gestión.
+
+## Páginas principales
+
+- [Inicio](/): Información general, ubicación, horarios y cita previa del Registro Civil de Elche.
+- [Preguntas frecuentes](/preguntas-frecuentes): Dudas habituales sobre trámites del Registro Civil.
+
+## Certificados
+
+- [Certificado de nacimiento](/certificado-nacimiento): Solicitud de certificado literal o extracto de nacimiento.
+- [Certificado de matrimonio](/certificado-matrimonio): Cómo obtener la partida de matrimonio actualizada.
+- [Certificado de defunción](/certificado-defuncion): Trámite de certificados de defunción.
+- [Fe de vida y estado](/fe-vida-estado): Documento que acredita estar vivo y el estado civil.
+
+## Nacionalidad
+
+- [Jura de nacionalidad](/jura-nacionalidad): Acto de jura o promesa para adquirir la nacionalidad española.
+- [Nacionalidad por opción](/expediente-nacionalidad-opcion): Expediente para hijos y nietos de españoles.
+- [Jura nacionalidad por opción](/jura-nacionalidad-opcion): Jura cuando la nacionalidad se adquiere por opción.
+- [Conservación de la nacionalidad](/conservacion-nacionalidad): Mantener o recuperar la nacionalidad española.
+- [Simple presunción de nacionalidad](/simple-presuncion-nacionalidad): Acreditación de la nacionalidad española.
+
+## Inscripciones
+
+- [Inscripción de recién nacido](/inscripcion-recien-nacido): Registrar el nacimiento de un bebé.
+- [Inscripción de nacimiento fuera de plazo](/inscripcion-nacimiento-fuera-plazo): Inscripción tras el plazo legal.
+- [Reconocimiento de hijo no matrimonial](/reconocimiento-hijo-no-matrimonial): Filiación de hijo no matrimonial.
+- [Inscripción de capitulaciones matrimoniales](/inscripcion-capitulaciones): Inscribir el régimen económico del matrimonio.
+
+## Matrimonio y modificaciones
+
+- [Expediente de matrimonio](/expediente-matrimonio): Expediente previo para contraer matrimonio civil.
+- [Cambio de nombre](/cambio-nombre): Procedimiento para modificar el nombre propio.
+- [Cambio de sexo](/cambio-sexo): Rectificación registral de la mención de sexo.
+- [Rectificación de error](/rectificacion-error): Corrección de errores en inscripciones.

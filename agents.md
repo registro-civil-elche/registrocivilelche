@@ -53,3 +53,25 @@ Al crear una nueva página de servicio:
 
 ### Lazy Loading
 - Solo `Home` se carga eagerly. Todas las demás páginas usan `lazy()` en `App.tsx`.
+
+### 7. Longitud de Meta Tags
+- `<title>`: **máximo 60 caracteres** (incluyendo espacios). Aplica tanto en `index.html` como en cada `metaTitle` de páginas React.
+- `<meta name="description">`: **entre 50 y 160 caracteres**. Aplica también a `metaDescription` de páginas React y a `og:description` / `twitter:description`.
+- Verificar la longitud antes de hacer commit; títulos/descripciones más largos se cortan en Google y bajan CTR.
+
+### 8. Dirección Oficial y Datos de Contacto
+- Dirección correcta del Registro Civil de Elche: **Calle Abogados de Atocha, 21, 03203 Elche, Alicante**.
+- **NUNCA** usar "Calle Eucalipto, 21" (dirección antigua/incorrecta).
+- Teléfono oficial: **966 91 70 96** (`+34 966 91 70 96` en JSON-LD).
+- El JSON-LD `GovernmentOffice` en `index.html` debe incluir `streetAddress` y `telephone` correctos.
+- Cualquier FAQ o texto visible que mencione la dirección debe usar la dirección correcta.
+
+### 9. Jerarquía de Encabezados (H1 → H2 → H3)
+- Cada página tiene exactamente **un `<h1>`** (el título principal del hero).
+- Las secciones principales deben usar **`<h2>`**. No saltar de `<h1>` a `<h3>`.
+- `CardTitle` de shadcn está configurado para renderizar `<h2>` en este proyecto: respetarlo y no sobrescribirlo a `<h3>` o `<div>`.
+- Subsecciones dentro de una sección `<h2>` pueden usar `<h3>`.
+
+### 10. Archivo /llms.txt
+- Mantener `public/llms.txt` actualizado con todas las páginas públicas indexables del sitio.
+- Cada vez que se cree o elimine una página, actualizar `llms.txt` y `sitemap.xml` a la vez.
