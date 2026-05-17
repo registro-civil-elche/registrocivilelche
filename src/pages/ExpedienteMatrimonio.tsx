@@ -5,8 +5,8 @@ const ExpedienteMatrimonio = () => {
   return (
     <ServicePageTemplate
       title="Expediente de Matrimonio Civil en Elche"
-      metaTitle="Expediente de Matrimonio Civil en Elche | Registro Civil 2025"
-      metaDescription="Información completa sobre el expediente previo al matrimonio civil en el Registro Civil de Elche. Requisitos, documentación, plazos y celebración de bodas civiles."
+      metaTitle="Expediente de Matrimonio Civil en Elche"
+      metaDescription="Expediente previo al matrimonio civil en el Registro Civil de Elche: requisitos, documentación, plazos y celebración."
       canonicalUrl="https://registrocivilelche.es/expediente-matrimonio"
       breadcrumbItems={[
         { name: "Inicio", href: "/" },

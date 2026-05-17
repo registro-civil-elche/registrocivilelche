@@ -5,8 +5,8 @@ const RectificacionError = () => {
   return (
     <ServicePageTemplate
       title="Rectificación de Error Registral en Elche"
-      metaTitle="Rectificación de Error Registral en Elche | Registro Civil 2025"
-      metaDescription="Información sobre la rectificación de errores en inscripciones del Registro Civil de Elche. Tipos de errores, requisitos, procedimiento y plazos para corregir datos incorrectos."
+      metaTitle="Rectificación de Error Registral en Elche"
+      metaDescription="Rectificación de errores en inscripciones del Registro Civil de Elche: tipos de errores, requisitos, procedimiento y plazos."
       canonicalUrl="https://registrocivilelche.es/rectificacion-error"
       breadcrumbItems={[
         { name: "Inicio", href: "/" },

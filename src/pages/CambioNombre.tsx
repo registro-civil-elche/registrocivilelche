@@ -5,8 +5,8 @@ const CambioNombre = () => {
   return (
     <ServicePageTemplate
       title="Cambio de Nombre e Inversión de Apellidos en Elche"
-      metaTitle="Cambio de Nombre e Inversión de Apellidos en Elche | Registro Civil 2025"
-      metaDescription="Guía completa para tramitar el cambio de nombre o inversión del orden de apellidos en el Registro Civil de Elche. Requisitos, documentación, plazos y procedimiento actualizado."
+      metaTitle="Cambio de Nombre y Apellidos en Elche"
+      metaDescription="Cómo tramitar el cambio de nombre o la inversión de apellidos en el Registro Civil de Elche: requisitos, documentación y procedimiento."
       canonicalUrl="https://registrocivilelche.es/cambio-nombre"
       breadcrumbItems={[
         { name: "Inicio", href: "/" },

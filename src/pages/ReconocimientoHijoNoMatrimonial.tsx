@@ -5,8 +5,8 @@ const ReconocimientoHijoNoMatrimonial = () => {
   return (
     <ServicePageTemplate
       title="Reconocimiento de Hijo No Matrimonial en Elche"
-      metaTitle="Reconocimiento de Hijo No Matrimonial en Elche | Registro Civil 2025"
-      metaDescription="Información sobre el reconocimiento de filiación de hijo no matrimonial en el Registro Civil de Elche. Requisitos, formas de reconocimiento y procedimiento completo."
+      metaTitle="Reconocimiento de Hijo No Matrimonial"
+      metaDescription="Reconocimiento de filiación de hijo no matrimonial en el Registro Civil de Elche: requisitos, formas y procedimiento."
       canonicalUrl="https://registrocivilelche.es/reconocimiento-hijo-no-matrimonial"
       breadcrumbItems={[
         { name: "Inicio", href: "/" },

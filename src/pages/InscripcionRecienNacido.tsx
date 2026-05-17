@@ -5,8 +5,8 @@ const InscripcionRecienNacido = () => {
   return (
     <ServicePageTemplate
       title="Inscripción de Recién Nacido en Elche"
-      metaTitle="Inscripción de Recién Nacido en Elche | Registro Civil 2025"
-      metaDescription="Guía completa para inscribir a un recién nacido en el Registro Civil de Elche. Plazos, documentación, nombre del bebé y libro de familia. Todo lo que necesitas saber."
+      metaTitle="Inscripción de Recién Nacido en Elche"
+      metaDescription="Cómo inscribir a un recién nacido en el Registro Civil de Elche: plazos, documentación, nombre del bebé y libro de familia."
       canonicalUrl="https://registrocivilelche.es/inscripcion-recien-nacido"
       breadcrumbItems={[
         { name: "Inicio", href: "/" },

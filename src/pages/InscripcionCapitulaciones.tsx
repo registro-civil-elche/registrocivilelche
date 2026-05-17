@@ -5,7 +5,7 @@ const InscripcionCapitulaciones = () => {
   return (
     <ServicePageTemplate
       title="Inscripción de Capitulaciones Matrimoniales en Elche"
-      metaTitle="Inscripción de Capitulaciones Matrimoniales en Elche | Registro Civil 2025"
+      metaTitle="Capitulaciones Matrimoniales en Elche"
       metaDescription="Información sobre la inscripción de capitulaciones matrimoniales en el Registro Civil de Elche. Régimen económico del matrimonio, requisitos y procedimiento."
       canonicalUrl="https://registrocivilelche.es/inscripcion-capitulaciones"
       breadcrumbItems={[

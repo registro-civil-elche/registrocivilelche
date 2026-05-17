@@ -6,7 +6,7 @@ const JuraNacionalidad = () => {
     <ServicePageTemplate
       title="Jura de Nacionalidad Española en Elche"
       metaTitle="Jura de Nacionalidad Española en Elche | Registro Civil 2025"
-      metaDescription="Información completa sobre la jura o promesa de nacionalidad española en el Registro Civil de Elche. Requisitos, cita previa, documentación y procedimiento actualizado."
+      metaDescription="Jura o promesa de nacionalidad española en el Registro Civil de Elche: requisitos, cita previa, documentación y procedimiento."
       canonicalUrl="https://registrocivilelche.es/jura-nacionalidad"
       breadcrumbItems={[
         { name: "Inicio", href: "/" },
