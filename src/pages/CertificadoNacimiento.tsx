@@ -43,8 +43,8 @@ const CertificadoNacimiento = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Certificado de Nacimiento en Elche - Cómo Solicitarlo, Plazos y Requisitos 2025</title>
-        <meta name="description" content="Guía completa para solicitar certificado literal o extracto de nacimiento en el Registro Civil de Elche. Documentación necesaria, plazos de entrega 24-48h, y dónde tramitarlo. Asesoramiento profesional disponible." />
+        <title>Certificado de Nacimiento en Elche: Cómo Solicitarlo</title>
+        <meta name="description" content="Cómo solicitar certificado literal o extracto de nacimiento en el Registro Civil de Elche: requisitos, plazos 24-48h y formas de tramitación." />
         <link rel="canonical" href="https://registrocivilelche.es/certificado-nacimiento" />
         <meta property="og:title" content="Certificado de Nacimiento en Elche - Guía Completa 2025" />
         <meta property="og:description" content="Información actualizada sobre cómo solicitar certificado de nacimiento literal o extracto en el Registro Civil de Elche. Plazos y documentación." />

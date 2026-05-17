@@ -43,8 +43,8 @@ const CertificadoMatrimonio = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Certificado de Matrimonio en Elche - Solicitud, Documentación y Plazos 2025</title>
-        <meta name="description" content="Cómo solicitar certificado de matrimonio actualizado en el Registro Civil de Elche. Guía completa con requisitos, documentación necesaria, plazos de 24-48h y formas de tramitación. Asesoría legal especializada." />
+        <title>Certificado de Matrimonio en Elche: Cómo Solicitarlo</title>
+        <meta name="description" content="Cómo solicitar el certificado de matrimonio en el Registro Civil de Elche: requisitos, documentación, plazos 24-48h y formas de tramitación." />
         <link rel="canonical" href="https://registrocivilelche.es/certificado-matrimonio" />
         <meta property="og:title" content="Certificado de Matrimonio en Elche - Guía Completa 2025" />
         <meta property="og:description" content="Información detallada sobre cómo obtener tu certificado de matrimonio actualizado en el Registro Civil de Elche. Requisitos y plazos." />
