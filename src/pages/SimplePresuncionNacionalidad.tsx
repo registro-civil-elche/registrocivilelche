@@ -5,7 +5,7 @@ const SimplePresuncionNacionalidad = () => {
   return (
     <ServicePageTemplate
       title="Simple Presunción de Nacionalidad Española en Elche"
-      metaTitle="Simple Presunción de Nacionalidad Española en Elche | Registro Civil 2025"
+      metaTitle="Simple Presunción de Nacionalidad en Elche"
       metaDescription="Información sobre la simple presunción de nacionalidad española en el Registro Civil de Elche. Cómo acreditar la nacionalidad española sin inscripción previa."
       canonicalUrl="https://registrocivilelche.es/simple-presuncion-nacionalidad"
       breadcrumbItems={[

@@ -5,8 +5,8 @@ const InscripcionNacimientoFueraPlazo = () => {
   return (
     <ServicePageTemplate
       title="Inscripción de Nacimiento Fuera de Plazo en Elche"
-      metaTitle="Inscripción de Nacimiento Fuera de Plazo en Elche | Registro Civil 2025"
-      metaDescription="Información sobre la inscripción de nacimiento fuera de plazo en el Registro Civil de Elche. Expediente especial, requisitos y procedimiento para inscripciones tardías."
+      metaTitle="Inscripción de Nacimiento Fuera de Plazo"
+      metaDescription="Inscripción de nacimiento fuera de plazo en el Registro Civil de Elche: expediente especial, requisitos y procedimiento."
       canonicalUrl="https://registrocivilelche.es/inscripcion-nacimiento-fuera-plazo"
       breadcrumbItems={[
         { name: "Inicio", href: "/" },

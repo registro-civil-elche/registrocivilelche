@@ -5,8 +5,8 @@ const ExpedienteNacionalidadOpcion = () => {
   return (
     <ServicePageTemplate
       title="Expediente de Nacionalidad por Opción en Elche"
-      metaTitle="Nacionalidad Española por Opción en Elche | Registro Civil 2025"
-      metaDescription="Información sobre la nacionalidad española por opción en el Registro Civil de Elche. Quién puede optar, requisitos para hijos de españoles y procedimiento completo."
+      metaTitle="Nacionalidad Española por Opción en Elche"
+      metaDescription="Nacionalidad española por opción en el Registro Civil de Elche: quién puede optar, requisitos para hijos de españoles y procedimiento."
       canonicalUrl="https://registrocivilelche.es/expediente-nacionalidad-opcion"
       breadcrumbItems={[
         { name: "Inicio", href: "/" },

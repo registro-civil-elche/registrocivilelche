@@ -5,7 +5,7 @@ const JuraNacionalidadOpcion = () => {
   return (
     <ServicePageTemplate
       title="Jura de Nacionalidad por Opción en Elche"
-      metaTitle="Jura de Nacionalidad por Opción en Elche | Registro Civil 2025"
+      metaTitle="Jura de Nacionalidad por Opción en Elche"
       metaDescription="Información sobre la jura de nacionalidad por derecho de opción en el Registro Civil de Elche. Requisitos para hijos de españoles y procedimiento completo."
       canonicalUrl="https://registrocivilelche.es/jura-nacionalidad-opcion"
       breadcrumbItems={[
